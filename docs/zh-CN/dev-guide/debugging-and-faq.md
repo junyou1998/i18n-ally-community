@@ -8,7 +8,7 @@
 
 ### 使用 Output Channel 查看日志
 
-插件会在 VS Code 的 Output 面板中输出日志，选择 `i18n Ally Next` 频道查看。
+插件会在 VS Code 的 Output 面板中输出日志，选择 `i18n Ally Community` 频道查看。
 
 ```typescript
 import { Log } from '~/utils'
@@ -21,7 +21,7 @@ Log.warn('未找到节点:', keypath)
 
 ```bash
 pnpm vsce:pack
-code --install-extension ./i18n-ally-next-*.vsix --force
+code --install-extension ./i18n-ally-community-*.vsix --force
 ```
 
 ## 常见问题

@@ -1,10 +1,10 @@
 # 自定义框架
 
-当你的 i18n 方案不在内置支持列表中时，可以通过自定义框架获得完整的 i18n Ally Next 支持。
+当你的 i18n 方案不在内置支持列表中时，可以通过自定义框架获得完整的 i18n Ally Community 支持。
 
 ## 基本自定义配置
 
-创建 `.vscode/i18n-ally-next-custom-framework.yml`：
+创建 `.vscode/i18n-ally-community-custom-framework.yml`：
 
 ```yaml
 languageIds:
@@ -24,9 +24,9 @@ refactorTemplates:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested"
 }
 ```
 
@@ -90,7 +90,7 @@ refactorTemplates:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.enabledFrameworks": ["react-i18next", "custom"]
+  "i18n-ally-community.enabledFrameworks": ["react-i18next", "custom"]
 }
 ```
 

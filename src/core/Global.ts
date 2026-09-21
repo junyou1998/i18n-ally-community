@@ -390,7 +390,7 @@ export class Global {
       Log.info(`🧩 Enabled frameworks: ${this.enabledFrameworks.map(i => i.display).join(', ')}`)
       Log.info(`🧬 Enabled parsers: ${this.enabledParsers.map(i => i.id).join(', ')}`)
       Log.info('')
-      commands.executeCommand('setContext', 'i18n-ally-next.extract.autoDetect', Config.extractAutoDetect)
+      commands.executeCommand('setContext', 'i18n-ally-community.extract.autoDetect', Config.extractAutoDetect)
 
       Telemetry.track(TelemetryKey.Enabled)
 

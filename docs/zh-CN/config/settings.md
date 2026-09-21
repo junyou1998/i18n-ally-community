@@ -1,12 +1,12 @@
 # .vscode/settings.json
 
-所有配置项在 `.vscode/settings.json` 中以 `i18n-ally-next.` 为前缀。
+所有配置项在 `.vscode/settings.json` 中以 `i18n-ally-community.` 为前缀。
 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.localesPaths": ["src/locales"]
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.localesPaths": ["src/locales"]
 }
 ```
 
@@ -21,7 +21,7 @@
 **使用场景：** 临时禁用插件而无需卸载，例如在非 i18n 分支上工作或排查性能问题时。
 
 ```jsonc
-{ "i18n-ally-next.disabled": true }
+{ "i18n-ally-community.disabled": true }
 ```
 
 ### `autoDetection`
@@ -34,9 +34,9 @@
 
 ```jsonc
 {
-  "i18n-ally-next.autoDetection": false,
-  "i18n-ally-next.enabledFrameworks": ["vue"],
-  "i18n-ally-next.localesPaths": ["src/locales"]
+  "i18n-ally-community.autoDetection": false,
+  "i18n-ally-community.enabledFrameworks": ["vue"],
+  "i18n-ally-community.localesPaths": ["src/locales"]
 }
 ```
 
@@ -50,10 +50,10 @@ locale 文件目录路径，相对于工作区根目录。
 
 ```jsonc
 // 单个路径
-{ "i18n-ally-next.localesPaths": "src/locales" }
+{ "i18n-ally-community.localesPaths": "src/locales" }
 
 // 多个路径（monorepo 或拆分的 locale）
-{ "i18n-ally-next.localesPaths": ["packages/app/locales", "packages/shared/locales"] }
+{ "i18n-ally-community.localesPaths": ["packages/app/locales", "packages/shared/locales"] }
 ```
 
 ### `encoding`
@@ -73,7 +73,7 @@ locale 文件目录路径，相对于工作区根目录。
 **使用场景：** 在 CI/审阅环境中启用，或当 locale 文件由外部系统管理（如 Crowdin、Lokalise）不应在本地修改时。
 
 ```jsonc
-{ "i18n-ally-next.readonly": true }
+{ "i18n-ally-community.readonly": true }
 ```
 
 ## 语言
@@ -88,7 +88,7 @@ locale 文件目录路径，相对于工作区根目录。
 
 ```jsonc
 // 中文作为源语言
-{ "i18n-ally-next.sourceLanguage": "zh-CN" }
+{ "i18n-ally-community.sourceLanguage": "zh-CN" }
 ```
 
 ### `displayLanguage`
@@ -101,8 +101,8 @@ locale 文件目录路径，相对于工作区根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.displayLanguage": "zh-CN"
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.displayLanguage": "zh-CN"
 }
 ```
 
@@ -115,7 +115,7 @@ locale 文件目录路径，相对于工作区根目录。
 **使用场景：** 隐藏未积极维护或自动生成的语言，减少侧边栏的杂乱。
 
 ```jsonc
-{ "i18n-ally-next.ignoredLocales": ["test", "pseudo"] }
+{ "i18n-ally-community.ignoredLocales": ["test", "pseudo"] }
 ```
 
 ### `languageTagSystem`
@@ -131,7 +131,7 @@ locale 文件目录路径，相对于工作区根目录。
 - `none` — 完全不规范化。当 locale 代码完全自定义时使用（如 `chinese`、`english`）。
 
 ```jsonc
-{ "i18n-ally-next.languageTagSystem": "none" }
+{ "i18n-ally-community.languageTagSystem": "none" }
 ```
 
 ### `localeCountryMap`
@@ -144,7 +144,7 @@ locale 文件目录路径，相对于工作区根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.localeCountryMap": {
+  "i18n-ally-community.localeCountryMap": {
     "en": "gb",
     "zh-CN": "cn",
     "zh-TW": "tw"
@@ -176,7 +176,7 @@ locale 文件中键的组织方式。
 
 ```jsonc
 // 强制使用扁平键风格
-{ "i18n-ally-next.keystyle": "flat" }
+{ "i18n-ally-community.keystyle": "flat" }
 ```
 
 ### `dirStructure`
@@ -193,7 +193,7 @@ locale 文件在磁盘上的组织方式。
 
 ```jsonc
 // 强制使用目录结构
-{ "i18n-ally-next.dirStructure": "dir" }
+{ "i18n-ally-community.dirStructure": "dir" }
 ```
 
 ### `disablePathParsing`
@@ -205,7 +205,7 @@ locale 文件在磁盘上的组织方式。
 **使用场景：** 当键中包含的点号不是路径分隔符时启用。例如，键 `com.example.app` 应被视为单个扁平键，而非嵌套路径。
 
 ```jsonc
-{ "i18n-ally-next.disablePathParsing": true }
+{ "i18n-ally-community.disablePathParsing": true }
 ```
 
 ### `namespace`
@@ -217,7 +217,7 @@ locale 文件在磁盘上的组织方式。
 **使用场景：** 某些框架（如 i18next）会自动启用命名空间。当使用自定义框架或自动检测不正确时，需要显式设置。详见[自定义框架](/zh-CN/guide/custom-framework)。
 
 ```jsonc
-{ "i18n-ally-next.namespace": true }
+{ "i18n-ally-community.namespace": true }
 ```
 
 ### `defaultNamespace`
@@ -230,8 +230,8 @@ locale 文件在磁盘上的组织方式。
 
 ```jsonc
 {
-  "i18n-ally-next.namespace": true,
-  "i18n-ally-next.defaultNamespace": "common"
+  "i18n-ally-community.namespace": true,
+  "i18n-ally-community.defaultNamespace": "common"
 }
 ```
 
@@ -248,13 +248,13 @@ locale 文件在磁盘上的组织方式。
 
 ```jsonc
 // 标准：locales/{locale}/{namespace}.json
-{ "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json" }
+{ "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json" }
 
 // 带命名空间的扁平结构：locales/{namespace}.{locale}.json
-{ "i18n-ally-next.pathMatcher": "{namespace}.{locale}.json" }
+{ "i18n-ally-community.pathMatcher": "{namespace}.{locale}.json" }
 
 // 无命名空间：locales/{locale}.json
-{ "i18n-ally-next.pathMatcher": "{locale}.json" }
+{ "i18n-ally-community.pathMatcher": "{locale}.json" }
 ```
 
 ## 注解
@@ -287,7 +287,7 @@ locale 文件在磁盘上的组织方式。
 **使用场景：** 启用后可以在视觉上区分完全是翻译键的字符串和仅包含键作为较大表达式一部分的字符串。
 
 ```jsonc
-{ "i18n-ally-next.annotationInPlaceFullMatch": true }
+{ "i18n-ally-community.annotationInPlaceFullMatch": true }
 ```
 
 ### `annotationMaxLength`
@@ -299,7 +299,7 @@ locale 文件在磁盘上的组织方式。
 **使用场景：** 对于文本较长的语言（如德语）增大此值，或减小以保持注解紧凑。
 
 ```jsonc
-{ "i18n-ally-next.annotationMaxLength": 80 }
+{ "i18n-ally-community.annotationMaxLength": 80 }
 ```
 
 ### `annotationDelimiter`
@@ -311,7 +311,7 @@ locale 文件在磁盘上的组织方式。
 **使用场景：** 更改键和翻译文本之间的视觉分隔符。
 
 ```jsonc
-{ "i18n-ally-next.annotationDelimiter": " → " }
+{ "i18n-ally-community.annotationDelimiter": " → " }
 ```
 
 ### `annotationBrackets`
@@ -324,13 +324,13 @@ locale 文件在磁盘上的组织方式。
 
 ```jsonc
 // 使用反引号包裹
-{ "i18n-ally-next.annotationBrackets": ["`", "`"] }
+{ "i18n-ally-community.annotationBrackets": ["`", "`"] }
 
 // 使用方括号包裹
-{ "i18n-ally-next.annotationBrackets": ["[", "]"] }
+{ "i18n-ally-community.annotationBrackets": ["[", "]"] }
 
 // 使用中文括号包裹
-{ "i18n-ally-next.annotationBrackets": ["「", "」"] }
+{ "i18n-ally-community.annotationBrackets": ["「", "」"] }
 ```
 
 ## 主题
@@ -383,7 +383,7 @@ locale 文件在磁盘上的组织方式。
 
 ```jsonc
 // 仅使用 Vue 和自定义框架
-{ "i18n-ally-next.enabledFrameworks": ["vue", "custom"] }
+{ "i18n-ally-community.enabledFrameworks": ["vue", "custom"] }
 ```
 
 ### `enabledParsers`
@@ -398,7 +398,7 @@ locale 文件在磁盘上的组织方式。
 
 ```jsonc
 // 仅解析 JSON 和 YAML 文件
-{ "i18n-ally-next.enabledParsers": ["json", "yaml"] }
+{ "i18n-ally-community.enabledParsers": ["json", "yaml"] }
 ```
 
 ### `parsers.extendFileExtensions`
@@ -411,7 +411,7 @@ locale 文件在磁盘上的组织方式。
 
 ```jsonc
 {
-  "i18n-ally-next.parsers.extendFileExtensions": {
+  "i18n-ally-community.parsers.extendFileExtensions": {
     "json5": "json5",
     "yml": "yaml",
     "lang": "json"
@@ -428,7 +428,7 @@ ts-node 二进制文件的路径，用于解析 TypeScript locale 文件。
 **使用场景：** 当 ts-node 安装在非标准位置时修改，或设为 `"ts-node"` 以使用全局安装的版本。
 
 ```jsonc
-{ "i18n-ally-next.parsers.typescript.tsNodePath": "ts-node" }
+{ "i18n-ally-community.parsers.typescript.tsNodePath": "ts-node" }
 ```
 
 ### `parsers.typescript.compilerOptions`
@@ -441,7 +441,7 @@ ts-node 二进制文件的路径，用于解析 TypeScript locale 文件。
 
 ```jsonc
 {
-  "i18n-ally-next.parsers.typescript.compilerOptions": {
+  "i18n-ally-community.parsers.typescript.compilerOptions": {
     "module": "commonjs",
     "esModuleInterop": true
   }
@@ -465,7 +465,7 @@ Ruby on Rails 作用域解析的根目录。
 **使用场景：** 当 Rails 视图在非标准目录时。插件使用此设置来解析 `t(".key")` 相对作用域键。
 
 ```jsonc
-{ "i18n-ally-next.frameworks.ruby-rails.scopeRoot": "app/views" }
+{ "i18n-ally-community.frameworks.ruby-rails.scopeRoot": "app/views" }
 ```
 
 ## 正则
@@ -480,7 +480,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 // 允许键中包含冒号（用于 namespace:key 模式）
-{ "i18n-ally-next.regex.key": "[\\w.:-]+" }
+{ "i18n-ally-community.regex.key": "[\\w.:-]+" }
 ```
 
 ### `regex.usageMatch`
@@ -497,7 +497,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatch": [
+  "i18n-ally-community.regex.usageMatch": [
     "\\Wt\\(\\s*['\"`]({key})['\"`]"
   ]
 }
@@ -513,7 +513,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\WcustomTranslate\\(\\s*['\"`]({key})['\"`]"
   ]
 }
@@ -535,7 +535,7 @@ Ruby on Rails 作用域解析的根目录。
 
 从 HTML 文件中提取硬编码字符串的解析器选项。
 
-**使用场景：** 当需要自定义插件如何在 HTML/Vue 模板中检测可提取的字符串时。参见[解析器选项源码](https://github.com/lydanne/i18n-ally-next/blob/master/src/extraction/parsers/options.ts)。
+**使用场景：** 当需要自定义插件如何在 HTML/Vue 模板中检测可提取的字符串时。参见[解析器选项源码](https://github.com/junyou1998/i18n-ally-community/blob/main/src/extraction/parsers/options.ts)。
 
 ### `extract.parsers.babel`
 
@@ -543,7 +543,7 @@ Ruby on Rails 作用域解析的根目录。
 
 从 JS/TS/JSX/TSX 文件中提取硬编码字符串的解析器选项。
 
-**使用场景：** 当需要自定义插件如何在 JavaScript/TypeScript 文件中检测可提取的字符串时。参见[解析器选项源码](https://github.com/lydanne/i18n-ally-next/blob/master/src/extraction/parsers/options.ts)。
+**使用场景：** 当需要自定义插件如何在 JavaScript/TypeScript 文件中检测可提取的字符串时。参见[解析器选项源码](https://github.com/junyou1998/i18n-ally-community/blob/main/src/extraction/parsers/options.ts)。
 
 ### `extract.scanningInclude`
 
@@ -555,7 +555,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.extract.scanningInclude": [
+  "i18n-ally-community.extract.scanningInclude": [
     "src/**/*.{ts,tsx,vue}"
   ]
 }
@@ -571,7 +571,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.extract.scanningIgnore": [
+  "i18n-ally-community.extract.scanningIgnore": [
     "src/generated/**",
     "**/*.test.ts"
   ]
@@ -593,7 +593,7 @@ Ruby on Rails 作用域解析的根目录。
 - `template` — 通过模板字符串生成键名（参见下方 `extract.keygenTemplate`）。
 
 ```jsonc
-{ "i18n-ally-next.extract.keygenStrategy": "slug" }
+{ "i18n-ally-community.extract.keygenStrategy": "slug" }
 ```
 
 ### `extract.keygenTemplate`
@@ -619,9 +619,9 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.extract.keygenStrategy": "template",
+  "i18n-ally-community.extract.keygenStrategy": "template",
   // 对于 src/commands/setup/setup.command.ts → 生成 "setup:setup.command"
-  "i18n-ally-next.extract.keygenTemplate": "{{dirname}}:{{filename}}"
+  "i18n-ally-community.extract.keygenTemplate": "{{dirname}}:{{filename}}"
 }
 ```
 
@@ -635,7 +635,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 // 生成 "hello-world" 而非 "hello_world"
-{ "i18n-ally-next.extract.keygenStyle": "kebab-case" }
+{ "i18n-ally-community.extract.keygenStyle": "kebab-case" }
 ```
 
 ### `extract.keyMaxLength`
@@ -647,7 +647,7 @@ Ruby on Rails 作用域解析的根目录。
 **使用场景：** 限制键长度以保持 locale 文件可读性，特别是从长字符串生成时。
 
 ```jsonc
-{ "i18n-ally-next.extract.keyMaxLength": 50 }
+{ "i18n-ally-community.extract.keyMaxLength": 50 }
 ```
 
 ### `extract.keyPrefix`
@@ -660,7 +660,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 // 所有提取的键将以 "settings." 开头
-{ "i18n-ally-next.extract.keyPrefix": "settings." }
+{ "i18n-ally-community.extract.keyPrefix": "settings." }
 ```
 
 ### `extract.targetPickingStrategy`
@@ -679,7 +679,7 @@ Ruby on Rails 作用域解析的根目录。
 - `global-previous` — 使用全局上次提取的同一文件。
 
 ```jsonc
-{ "i18n-ally-next.extract.targetPickingStrategy": "file-previous" }
+{ "i18n-ally-community.extract.targetPickingStrategy": "file-previous" }
 ```
 
 ### `extract.ignored`
@@ -692,7 +692,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.extract.ignored": [
+  "i18n-ally-community.extract.ignored": [
     "TODO",
     "FIXME",
     "http://",
@@ -711,7 +711,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.extract.ignoredByFiles": {
+  "i18n-ally-community.extract.ignoredByFiles": {
     "src/constants/**": ["DEBUG", "PRODUCTION"],
     "src/styles/**": ["flex", "grid", "block"]
   }
@@ -734,7 +734,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.refactor.templates": [
+  "i18n-ally-community.refactor.templates": [
     {
       "source": "js-string",
       "templates": ["t('$1')", "i18n.t('$1')"]
@@ -766,7 +766,7 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 // 使用 DeepL 为主，Google 为备
-{ "i18n-ally-next.translate.engines": ["deepl", "google"] }
+{ "i18n-ally-community.translate.engines": ["deepl", "google"] }
 ```
 
 ### `translate.parallels`
@@ -815,8 +815,8 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["google"],
-  "i18n-ally-next.translate.google.apiKey": "YOUR_API_KEY"
+  "i18n-ally-community.translate.engines": ["google"],
+  "i18n-ally-community.translate.google.apiKey": "YOUR_API_KEY"
 }
 ```
 
@@ -825,7 +825,7 @@ Ruby on Rails 作用域解析的根目录。
 #### Google 翻译（中国）
 
 ```jsonc
-{ "i18n-ally-next.translate.engines": ["google-cn"] }
+{ "i18n-ally-community.translate.engines": ["google-cn"] }
 ```
 
 使用 `translate.google.cn` 端点。无需 API 密钥。适合中国大陆用户。
@@ -834,9 +834,9 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["deepl"],
-  "i18n-ally-next.translate.deepl.apiKey": "YOUR_API_KEY",
-  "i18n-ally-next.translate.deepl.useFreeApiEntry": true
+  "i18n-ally-community.translate.engines": ["deepl"],
+  "i18n-ally-community.translate.deepl.apiKey": "YOUR_API_KEY",
+  "i18n-ally-community.translate.deepl.useFreeApiEntry": true
 }
 ```
 
@@ -848,9 +848,9 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["baidu"],
-  "i18n-ally-next.translate.baidu.appid": "YOUR_APP_ID",
-  "i18n-ally-next.translate.baidu.apiSecret": "YOUR_API_SECRET"
+  "i18n-ally-community.translate.engines": ["baidu"],
+  "i18n-ally-community.translate.baidu.appid": "YOUR_APP_ID",
+  "i18n-ally-community.translate.baidu.apiSecret": "YOUR_API_SECRET"
 }
 ```
 
@@ -861,8 +861,8 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["libretranslate"],
-  "i18n-ally-next.translate.libre.apiRoot": "http://localhost:5000"
+  "i18n-ally-community.translate.engines": ["libretranslate"],
+  "i18n-ally-community.translate.libre.apiRoot": "http://localhost:5000"
 }
 ```
 
@@ -872,10 +872,10 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["openai"],
-  "i18n-ally-next.translate.openai.apiKey": "YOUR_API_KEY",
-  "i18n-ally-next.translate.openai.apiRoot": "https://api.openai.com",
-  "i18n-ally-next.translate.openai.apiModel": "gpt-3.5-turbo"
+  "i18n-ally-community.translate.engines": ["openai"],
+  "i18n-ally-community.translate.openai.apiKey": "YOUR_API_KEY",
+  "i18n-ally-community.translate.openai.apiRoot": "https://api.openai.com",
+  "i18n-ally-community.translate.openai.apiModel": "gpt-3.5-turbo"
 }
 ```
 
@@ -887,9 +887,9 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["ollama"],
-  "i18n-ally-next.translate.ollama.apiRoot": "http://localhost:11434",
-  "i18n-ally-next.translate.ollama.model": "qwen2.5:latest"
+  "i18n-ally-community.translate.engines": ["ollama"],
+  "i18n-ally-community.translate.ollama.apiRoot": "http://localhost:11434",
+  "i18n-ally-community.translate.ollama.model": "qwen2.5:latest"
 }
 ```
 
@@ -900,8 +900,8 @@ Ruby on Rails 作用域解析的根目录。
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["editor-llm"],
-  "i18n-ally-next.translate.editor-llm.model": ""
+  "i18n-ally-community.translate.engines": ["editor-llm"],
+  "i18n-ally-community.translate.editor-llm.model": ""
 }
 ```
 
@@ -972,7 +972,7 @@ locale 文件中使用空格还是制表符缩进。
 **使用场景：** 启用以保持 locale 文件中一致的键顺序，使 diff 更清晰并减少合并冲突。
 
 ```jsonc
-{ "i18n-ally-next.sortKeys": true }
+{ "i18n-ally-community.sortKeys": true }
 ```
 
 ### `sortCompare`
@@ -994,8 +994,8 @@ locale 文件中使用空格还是制表符缩进。
 
 ```jsonc
 {
-  "i18n-ally-next.sortCompare": "locale",
-  "i18n-ally-next.sortLocale": "zh-CN"
+  "i18n-ally-community.sortCompare": "locale",
+  "i18n-ally-community.sortLocale": "zh-CN"
 }
 ```
 
@@ -1019,7 +1019,7 @@ locale 文件中使用空格还是制表符缩进。
 
 ```jsonc
 {
-  "i18n-ally-next.keysInUse": [
+  "i18n-ally-community.keysInUse": [
     "errors.*",
     "dynamic.key.prefix.*"
   ]
@@ -1036,7 +1036,7 @@ locale 文件中使用空格还是制表符缩进。
 
 ```jsonc
 {
-  "i18n-ally-next.usage.derivedKeyRules": [
+  "i18n-ally-community.usage.derivedKeyRules": [
     "{key}_one",
     "{key}_other",
     "{key}_zero",
@@ -1055,7 +1055,7 @@ locale 文件中使用空格还是制表符缩进。
 
 ```jsonc
 {
-  "i18n-ally-next.usage.scanningIgnore": [
+  "i18n-ally-community.usage.scanningIgnore": [
     "dist/**",
     "**/*.test.ts",
     "**/*.spec.ts"
@@ -1099,7 +1099,7 @@ locale 文件中使用空格还是制表符缩进。
 
 ```jsonc
 {
-  "i18n-ally-next.ignoreFiles": [
+  "i18n-ally-community.ignoreFiles": [
     "**/*.backup.json",
     "**/generated/**"
   ]

@@ -1,6 +1,6 @@
 # 支持的框架
 
-i18n Ally Next 开箱即用地支持多种 i18n 框架，通过读取项目依赖文件自动检测。
+i18n Ally Community 开箱即用地支持多种 i18n 框架，通过读取项目依赖文件自动检测。
 
 ## Web 框架
 
@@ -47,7 +47,7 @@ i18n Ally Next 开箱即用地支持多种 i18n 框架，通过读取项目依�
 | **UI5** | `@openui5/sap.ui.core` | js, ts, xml |
 | **Jekyll** | `jekyll-multiple-languages-plugin` | html, md |
 | **Fluent Vue** | `fluent-vue` | vue, js, ts |
-| **General** | `i18n-ally-next` | js, ts, jsx, tsx |
+| **General** | `i18n-ally-community` | js, ts, jsx, tsx |
 
 ## 自定义框架
 
@@ -58,6 +58,6 @@ i18n Ally Next 开箱即用地支持多种 i18n 框架，通过读取项目依�
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.enabledFrameworks": ["react-i18next", "custom"]
+  "i18n-ally-community.enabledFrameworks": ["react-i18next", "custom"]
 }
 ```

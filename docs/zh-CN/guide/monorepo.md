@@ -2,7 +2,7 @@
 
 ## 工作区级别配置
 
-在 monorepo 中，每个包可以有自己的 `.vscode/settings.json`。但如果你在 VS Code 中打开 monorepo 根目录，需要配置 i18n Ally Next 以跨包查找语言文件。
+在 monorepo 中，每个包可以有自己的 `.vscode/settings.json`。但如果你在 VS Code 中打开 monorepo 根目录，需要配置 i18n Ally Community 以跨包查找语言文件。
 
 ### 方案一：多个语言文件路径
 
@@ -11,7 +11,7 @@
 ```jsonc
 // .vscode/settings.json（monorepo 根目录）
 {
-  "i18n-ally-next.localesPaths": [
+  "i18n-ally-community.localesPaths": [
     "packages/web/src/locales",
     "packages/admin/src/locales",
     "packages/shared/locales"
@@ -25,8 +25,8 @@
 
 ```jsonc
 {
-  "i18n-ally-next.localesPaths": ["packages"],
-  "i18n-ally-next.pathMatcher": "{namespace}/{locale}.json"
+  "i18n-ally-community.localesPaths": ["packages"],
+  "i18n-ally-community.pathMatcher": "{namespace}/{locale}.json"
 }
 ```
 
@@ -61,19 +61,19 @@ packages/
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": [
+  "i18n-ally-community.localesPaths": [
     "packages/shared/locales",
     "packages/web/src/locales",
     "packages/admin/src/locales"
   ],
-  "i18n-ally-next.dirStructure": "dir",
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json"
+  "i18n-ally-community.dirStructure": "dir",
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json"
 }
 ```
 
 ## VS Code 多根工作区
 
-为了更好的隔离性，使用[多根工作区](https://code.visualstudio.com/docs/editor/multi-root-workspaces)。每个工作区文件夹拥有独立的 i18n Ally Next 配置：
+为了更好的隔离性，使用[多根工作区](https://code.visualstudio.com/docs/editor/multi-root-workspaces)。每个工作区文件夹拥有独立的 i18n Ally Community 配置：
 
 ```jsonc
 // monorepo.code-workspace
@@ -91,9 +91,9 @@ packages/
 ```jsonc
 // packages/web/.vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested"
 }
 ```
 
@@ -121,10 +121,10 @@ locales/
 
 ```jsonc
 {
-  "i18n-ally-next.localesPaths": ["locales"],
-  "i18n-ally-next.dirStructure": "dir",
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json",
-  "i18n-ally-next.defaultNamespace": "common"
+  "i18n-ally-community.localesPaths": ["locales"],
+  "i18n-ally-community.dirStructure": "dir",
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json",
+  "i18n-ally-community.defaultNamespace": "common"
 }
 ```
 

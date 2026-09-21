@@ -1,12 +1,12 @@
 # .vscode/settings.json
 
-All settings are prefixed with `i18n-ally-next.` in your `.vscode/settings.json`.
+All settings are prefixed with `i18n-ally-community.` in your `.vscode/settings.json`.
 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.localesPaths": ["src/locales"]
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.localesPaths": ["src/locales"]
 }
 ```
 
@@ -21,7 +21,7 @@ Disable the extension entirely.
 **When to use:** Temporarily disable the extension for a workspace without uninstalling it, e.g. when working on a non-i18n branch or debugging performance issues.
 
 ```jsonc
-{ "i18n-ally-next.disabled": true }
+{ "i18n-ally-community.disabled": true }
 ```
 
 ### `autoDetection`
@@ -34,9 +34,9 @@ Automatically detect frameworks and locale file paths.
 
 ```jsonc
 {
-  "i18n-ally-next.autoDetection": false,
-  "i18n-ally-next.enabledFrameworks": ["vue"],
-  "i18n-ally-next.localesPaths": ["src/locales"]
+  "i18n-ally-community.autoDetection": false,
+  "i18n-ally-community.enabledFrameworks": ["vue"],
+  "i18n-ally-community.localesPaths": ["src/locales"]
 }
 ```
 
@@ -50,10 +50,10 @@ Paths to locale directories, relative to workspace root.
 
 ```jsonc
 // Single path
-{ "i18n-ally-next.localesPaths": "src/locales" }
+{ "i18n-ally-community.localesPaths": "src/locales" }
 
 // Multiple paths (monorepo or split locales)
-{ "i18n-ally-next.localesPaths": ["packages/app/locales", "packages/shared/locales"] }
+{ "i18n-ally-community.localesPaths": ["packages/app/locales", "packages/shared/locales"] }
 ```
 
 ### `encoding`
@@ -73,7 +73,7 @@ Prevent the extension from writing to locale files.
 **When to use:** Enable in CI/review environments or when locale files are managed by an external system (e.g. Crowdin, Lokalise) and should not be modified locally.
 
 ```jsonc
-{ "i18n-ally-next.readonly": true }
+{ "i18n-ally-community.readonly": true }
 ```
 
 ## Language
@@ -88,7 +88,7 @@ The primary language of your project. This is the language you write your transl
 
 ```jsonc
 // Chinese as source language
-{ "i18n-ally-next.sourceLanguage": "zh-CN" }
+{ "i18n-ally-community.sourceLanguage": "zh-CN" }
 ```
 
 ### `displayLanguage`
@@ -101,8 +101,8 @@ The language shown in inline annotations in your code editor.
 
 ```jsonc
 {
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.displayLanguage": "zh-CN"
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.displayLanguage": "zh-CN"
 }
 ```
 
@@ -115,7 +115,7 @@ Locales to hide from the sidebar tree view.
 **When to use:** Hide locales that are not actively maintained or are auto-generated, to reduce clutter in the sidebar.
 
 ```jsonc
-{ "i18n-ally-next.ignoredLocales": ["test", "pseudo"] }
+{ "i18n-ally-community.ignoredLocales": ["test", "pseudo"] }
 ```
 
 ### `languageTagSystem`
@@ -131,7 +131,7 @@ Language tag normalization system.
 - `none` — No normalization at all. Use when locale codes are completely custom (e.g. `chinese`, `english`).
 
 ```jsonc
-{ "i18n-ally-next.languageTagSystem": "none" }
+{ "i18n-ally-community.languageTagSystem": "none" }
 ```
 
 ### `localeCountryMap`
@@ -144,7 +144,7 @@ Custom mapping from locale codes to country codes for flag display.
 
 ```jsonc
 {
-  "i18n-ally-next.localeCountryMap": {
+  "i18n-ally-community.localeCountryMap": {
     "en": "gb",
     "zh-CN": "cn",
     "zh-TW": "tw"
@@ -176,7 +176,7 @@ How keys are organized in locale files.
 
 ```jsonc
 // Force flat key style
-{ "i18n-ally-next.keystyle": "flat" }
+{ "i18n-ally-community.keystyle": "flat" }
 ```
 
 ### `dirStructure`
@@ -193,7 +193,7 @@ How locale files are organized on disk.
 
 ```jsonc
 // Force directory-based structure
-{ "i18n-ally-next.dirStructure": "dir" }
+{ "i18n-ally-community.dirStructure": "dir" }
 ```
 
 ### `disablePathParsing`
@@ -205,7 +205,7 @@ Treat keys as flat strings without dot-path parsing.
 **When to use:** Enable when your keys contain dots that are NOT path separators. For example, if you have keys like `com.example.app` that should be treated as a single flat key, not a nested path.
 
 ```jsonc
-{ "i18n-ally-next.disablePathParsing": true }
+{ "i18n-ally-community.disablePathParsing": true }
 ```
 
 ### `namespace`
@@ -217,7 +217,7 @@ Enable namespace support globally.
 **When to use:** Some frameworks (like i18next) auto-enable namespaces. Set this explicitly when using a custom framework or when auto-detection doesn't work correctly. See [Custom Framework](/guide/custom-framework) for details.
 
 ```jsonc
-{ "i18n-ally-next.namespace": true }
+{ "i18n-ally-community.namespace": true }
 ```
 
 ### `defaultNamespace`
@@ -230,8 +230,8 @@ Default namespace for keys without an explicit namespace prefix.
 
 ```jsonc
 {
-  "i18n-ally-next.namespace": true,
-  "i18n-ally-next.defaultNamespace": "common"
+  "i18n-ally-community.namespace": true,
+  "i18n-ally-community.defaultNamespace": "common"
 }
 ```
 
@@ -248,13 +248,13 @@ Custom pattern for matching locale file paths. Supports placeholders:
 
 ```jsonc
 // Standard: locales/{locale}/{namespace}.json
-{ "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json" }
+{ "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json" }
 
 // Flat with namespace: locales/{namespace}.{locale}.json
-{ "i18n-ally-next.pathMatcher": "{namespace}.{locale}.json" }
+{ "i18n-ally-community.pathMatcher": "{namespace}.{locale}.json" }
 
 // No namespace: locales/{locale}.json
-{ "i18n-ally-next.pathMatcher": "{locale}.json" }
+{ "i18n-ally-community.pathMatcher": "{locale}.json" }
 ```
 
 ## Annotations
@@ -287,7 +287,7 @@ Enable full-match mode for in-place annotations. When the entire string literal 
 **When to use:** Enable to visually distinguish strings that are entirely translation keys from strings that only contain a key as part of a larger expression.
 
 ```jsonc
-{ "i18n-ally-next.annotationInPlaceFullMatch": true }
+{ "i18n-ally-community.annotationInPlaceFullMatch": true }
 ```
 
 ### `annotationMaxLength`
@@ -299,7 +299,7 @@ Maximum number of characters for annotation text. Longer translations are trunca
 **When to use:** Increase for languages with longer text (e.g. German), or decrease to keep annotations compact.
 
 ```jsonc
-{ "i18n-ally-next.annotationMaxLength": 80 }
+{ "i18n-ally-community.annotationMaxLength": 80 }
 ```
 
 ### `annotationDelimiter`
@@ -311,7 +311,7 @@ The delimiter character shown before annotation text (only used when `annotation
 **When to use:** Change the visual separator between the key and the translation text.
 
 ```jsonc
-{ "i18n-ally-next.annotationDelimiter": " → " }
+{ "i18n-ally-community.annotationDelimiter": " → " }
 ```
 
 ### `annotationBrackets`
@@ -324,13 +324,13 @@ Brackets to wrap annotation text. The first element is the left bracket, the sec
 
 ```jsonc
 // Wrap with backticks
-{ "i18n-ally-next.annotationBrackets": ["`", "`"] }
+{ "i18n-ally-community.annotationBrackets": ["`", "`"] }
 
 // Wrap with square brackets
-{ "i18n-ally-next.annotationBrackets": ["[", "]"] }
+{ "i18n-ally-community.annotationBrackets": ["[", "]"] }
 
 // Wrap with CJK brackets
-{ "i18n-ally-next.annotationBrackets": ["「", "」"] }
+{ "i18n-ally-community.annotationBrackets": ["「", "」"] }
 ```
 
 ## Theme
@@ -383,7 +383,7 @@ Available values: `vue`, `react`, `vscode`, `ngx-translate`, `i18next`, `react-i
 
 ```jsonc
 // Use only Vue and custom framework
-{ "i18n-ally-next.enabledFrameworks": ["vue", "custom"] }
+{ "i18n-ally-community.enabledFrameworks": ["vue", "custom"] }
 ```
 
 ### `enabledParsers`
@@ -398,7 +398,7 @@ Available values: `js`, `ts`, `json`, `json5`, `yaml`, `ini`, `po`, `php`, `prop
 
 ```jsonc
 // Only parse JSON and YAML files
-{ "i18n-ally-next.enabledParsers": ["json", "yaml"] }
+{ "i18n-ally-community.enabledParsers": ["json", "yaml"] }
 ```
 
 ### `parsers.extendFileExtensions`
@@ -411,7 +411,7 @@ Map custom file extensions to existing parsers.
 
 ```jsonc
 {
-  "i18n-ally-next.parsers.extendFileExtensions": {
+  "i18n-ally-community.parsers.extendFileExtensions": {
     "json5": "json5",
     "yml": "yaml",
     "lang": "json"
@@ -428,7 +428,7 @@ Path to the ts-node binary, used for parsing TypeScript locale files.
 **When to use:** Change if your ts-node is installed in a non-standard location, or set to `"ts-node"` to use the globally installed version.
 
 ```jsonc
-{ "i18n-ally-next.parsers.typescript.tsNodePath": "ts-node" }
+{ "i18n-ally-community.parsers.typescript.tsNodePath": "ts-node" }
 ```
 
 ### `parsers.typescript.compilerOptions`
@@ -441,7 +441,7 @@ TypeScript compiler options passed to ts-node when parsing TypeScript locale fil
 
 ```jsonc
 {
-  "i18n-ally-next.parsers.typescript.compilerOptions": {
+  "i18n-ally-community.parsers.typescript.compilerOptions": {
     "module": "commonjs",
     "esModuleInterop": true
   }
@@ -465,7 +465,7 @@ Root directory for Ruby on Rails scope resolution.
 **When to use:** When your Rails views are in a non-standard directory. The extension uses this to resolve `t(".key")` relative scoped keys.
 
 ```jsonc
-{ "i18n-ally-next.frameworks.ruby-rails.scopeRoot": "app/views" }
+{ "i18n-ally-community.frameworks.ruby-rails.scopeRoot": "app/views" }
 ```
 
 ## Regex
@@ -480,7 +480,7 @@ Regex pattern for matching valid key characters.
 
 ```jsonc
 // Allow colons in keys (for namespace:key pattern)
-{ "i18n-ally-next.regex.key": "[\\w.:-]+" }
+{ "i18n-ally-community.regex.key": "[\\w.:-]+" }
 ```
 
 ### `regex.usageMatch`
@@ -497,7 +497,7 @@ This overrides all framework patterns. Use `regex.usageMatchAppend` instead if y
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatch": [
+  "i18n-ally-community.regex.usageMatch": [
     "\\Wt\\(\\s*['\"`]({key})['\"`]"
   ]
 }
@@ -513,7 +513,7 @@ Append extra usage match patterns to the framework's built-in patterns.
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\WcustomTranslate\\(\\s*['\"`]({key})['\"`]"
   ]
 }
@@ -535,7 +535,7 @@ Automatically detect hard-coded strings when opening a supported file.
 
 Parser options for extracting hard-coded strings from HTML files.
 
-**When to use:** When you need to customize how the extension detects extractable strings in HTML/Vue templates. See [parser options source](https://github.com/lydanne/i18n-ally-next/blob/master/src/extraction/parsers/options.ts) for available options.
+**When to use:** When you need to customize how the extension detects extractable strings in HTML/Vue templates. See [parser options source](https://github.com/junyou1998/i18n-ally-community/blob/main/src/extraction/parsers/options.ts) for available options.
 
 ### `extract.parsers.babel`
 
@@ -543,7 +543,7 @@ Parser options for extracting hard-coded strings from HTML files.
 
 Parser options for extracting hard-coded strings from JS/TS/JSX/TSX files.
 
-**When to use:** When you need to customize how the extension detects extractable strings in JavaScript/TypeScript files. See [parser options source](https://github.com/lydanne/i18n-ally-next/blob/master/src/extraction/parsers/options.ts) for available options.
+**When to use:** When you need to customize how the extension detects extractable strings in JavaScript/TypeScript files. See [parser options source](https://github.com/junyou1998/i18n-ally-community/blob/main/src/extraction/parsers/options.ts) for available options.
 
 ### `extract.scanningInclude`
 
@@ -555,7 +555,7 @@ Glob patterns for files to include when batch scanning for hard-coded strings.
 
 ```jsonc
 {
-  "i18n-ally-next.extract.scanningInclude": [
+  "i18n-ally-community.extract.scanningInclude": [
     "src/**/*.{ts,tsx,vue}"
   ]
 }
@@ -571,7 +571,7 @@ Glob patterns for files to ignore when batch scanning for hard-coded strings.
 
 ```jsonc
 {
-  "i18n-ally-next.extract.scanningIgnore": [
+  "i18n-ally-community.extract.scanningIgnore": [
     "src/generated/**",
     "**/*.test.ts"
   ]
@@ -593,7 +593,7 @@ Strategy for generating key names when extracting strings.
 - `template` — Generate keys from a template string (see `extract.keygenTemplate` below).
 
 ```jsonc
-{ "i18n-ally-next.extract.keygenStrategy": "slug" }
+{ "i18n-ally-community.extract.keygenStrategy": "slug" }
 ```
 
 ### `extract.keygenTemplate`
@@ -619,9 +619,9 @@ Template string for generating key names when `keygenStrategy` is `"template"`.
 
 ```jsonc
 {
-  "i18n-ally-next.extract.keygenStrategy": "template",
+  "i18n-ally-community.extract.keygenStrategy": "template",
   // For file at src/commands/setup/setup.command.ts → generates "setup:setup.command"
-  "i18n-ally-next.extract.keygenTemplate": "{{dirname}}:{{filename}}"
+  "i18n-ally-community.extract.keygenTemplate": "{{dirname}}:{{filename}}"
 }
 ```
 
@@ -635,7 +635,7 @@ Casing style for generated key names (only applies when `keygenStrategy` is `slu
 
 ```jsonc
 // Generate keys like "hello-world" instead of "hello_world"
-{ "i18n-ally-next.extract.keygenStyle": "kebab-case" }
+{ "i18n-ally-community.extract.keygenStyle": "kebab-case" }
 ```
 
 ### `extract.keyMaxLength`
@@ -647,7 +647,7 @@ Maximum length for generated keys.
 **When to use:** Limit key length to keep locale files readable, especially when generating from long strings.
 
 ```jsonc
-{ "i18n-ally-next.extract.keyMaxLength": 50 }
+{ "i18n-ally-community.extract.keyMaxLength": 50 }
 ```
 
 ### `extract.keyPrefix`
@@ -660,7 +660,7 @@ Prefix added to all generated keys.
 
 ```jsonc
 // All extracted keys will start with "settings."
-{ "i18n-ally-next.extract.keyPrefix": "settings." }
+{ "i18n-ally-community.extract.keyPrefix": "settings." }
 ```
 
 ### `extract.targetPickingStrategy`
@@ -679,7 +679,7 @@ How to automatically pick the target locale file when extracting.
 - `global-previous` — Use the same file as the last extraction globally.
 
 ```jsonc
-{ "i18n-ally-next.extract.targetPickingStrategy": "file-previous" }
+{ "i18n-ally-community.extract.targetPickingStrategy": "file-previous" }
 ```
 
 ### `extract.ignored`
@@ -692,7 +692,7 @@ Strings to ignore during hard-coded string detection.
 
 ```jsonc
 {
-  "i18n-ally-next.extract.ignored": [
+  "i18n-ally-community.extract.ignored": [
     "TODO",
     "FIXME",
     "http://",
@@ -711,7 +711,7 @@ Per-file ignored strings during extraction. Keys are glob patterns, values are s
 
 ```jsonc
 {
-  "i18n-ally-next.extract.ignoredByFiles": {
+  "i18n-ally-community.extract.ignoredByFiles": {
     "src/constants/**": ["DEBUG", "PRODUCTION"],
     "src/styles/**": ["flex", "grid", "block"]
   }
@@ -734,7 +734,7 @@ Each template object supports:
 
 ```jsonc
 {
-  "i18n-ally-next.refactor.templates": [
+  "i18n-ally-community.refactor.templates": [
     {
       "source": "js-string",
       "templates": ["t('$1')", "i18n.t('$1')"]
@@ -766,7 +766,7 @@ Available values: `google`, `google-cn`, `deepl`, `libretranslate`, `baidu`, `op
 
 ```jsonc
 // Use DeepL as primary, Google as fallback
-{ "i18n-ally-next.translate.engines": ["deepl", "google"] }
+{ "i18n-ally-community.translate.engines": ["deepl", "google"] }
 ```
 
 ### `translate.parallels`
@@ -815,8 +815,8 @@ Use the key name as fallback text when no translation exists.
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["google"],
-  "i18n-ally-next.translate.google.apiKey": "YOUR_API_KEY"
+  "i18n-ally-community.translate.engines": ["google"],
+  "i18n-ally-community.translate.google.apiKey": "YOUR_API_KEY"
 }
 ```
 
@@ -825,7 +825,7 @@ Use the key name as fallback text when no translation exists.
 #### Google Translate (China)
 
 ```jsonc
-{ "i18n-ally-next.translate.engines": ["google-cn"] }
+{ "i18n-ally-community.translate.engines": ["google-cn"] }
 ```
 
 Uses `translate.google.cn` endpoint. No API key required. Best for users in mainland China.
@@ -834,9 +834,9 @@ Uses `translate.google.cn` endpoint. No API key required. Best for users in main
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["deepl"],
-  "i18n-ally-next.translate.deepl.apiKey": "YOUR_API_KEY",
-  "i18n-ally-next.translate.deepl.useFreeApiEntry": true
+  "i18n-ally-community.translate.engines": ["deepl"],
+  "i18n-ally-community.translate.deepl.apiKey": "YOUR_API_KEY",
+  "i18n-ally-community.translate.deepl.useFreeApiEntry": true
 }
 ```
 
@@ -848,9 +848,9 @@ Uses `translate.google.cn` endpoint. No API key required. Best for users in main
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["baidu"],
-  "i18n-ally-next.translate.baidu.appid": "YOUR_APP_ID",
-  "i18n-ally-next.translate.baidu.apiSecret": "YOUR_API_SECRET"
+  "i18n-ally-community.translate.engines": ["baidu"],
+  "i18n-ally-community.translate.baidu.appid": "YOUR_APP_ID",
+  "i18n-ally-community.translate.baidu.apiSecret": "YOUR_API_SECRET"
 }
 ```
 
@@ -861,8 +861,8 @@ Uses `translate.google.cn` endpoint. No API key required. Best for users in main
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["libretranslate"],
-  "i18n-ally-next.translate.libre.apiRoot": "http://localhost:5000"
+  "i18n-ally-community.translate.engines": ["libretranslate"],
+  "i18n-ally-community.translate.libre.apiRoot": "http://localhost:5000"
 }
 ```
 
@@ -872,10 +872,10 @@ Uses `translate.google.cn` endpoint. No API key required. Best for users in main
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["openai"],
-  "i18n-ally-next.translate.openai.apiKey": "YOUR_API_KEY",
-  "i18n-ally-next.translate.openai.apiRoot": "https://api.openai.com",
-  "i18n-ally-next.translate.openai.apiModel": "gpt-3.5-turbo"
+  "i18n-ally-community.translate.engines": ["openai"],
+  "i18n-ally-community.translate.openai.apiKey": "YOUR_API_KEY",
+  "i18n-ally-community.translate.openai.apiRoot": "https://api.openai.com",
+  "i18n-ally-community.translate.openai.apiModel": "gpt-3.5-turbo"
 }
 ```
 
@@ -887,9 +887,9 @@ Uses `translate.google.cn` endpoint. No API key required. Best for users in main
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["ollama"],
-  "i18n-ally-next.translate.ollama.apiRoot": "http://localhost:11434",
-  "i18n-ally-next.translate.ollama.model": "qwen2.5:latest"
+  "i18n-ally-community.translate.engines": ["ollama"],
+  "i18n-ally-community.translate.ollama.apiRoot": "http://localhost:11434",
+  "i18n-ally-community.translate.ollama.model": "qwen2.5:latest"
 }
 ```
 
@@ -900,8 +900,8 @@ Uses `translate.google.cn` endpoint. No API key required. Best for users in main
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["editor-llm"],
-  "i18n-ally-next.translate.editor-llm.model": ""
+  "i18n-ally-community.translate.engines": ["editor-llm"],
+  "i18n-ally-community.translate.editor-llm.model": ""
 }
 ```
 
@@ -972,7 +972,7 @@ Sort keys alphabetically when writing locale files.
 **When to use:** Enable to maintain consistent key ordering across locale files, making diffs cleaner and reducing merge conflicts.
 
 ```jsonc
-{ "i18n-ally-next.sortKeys": true }
+{ "i18n-ally-community.sortKeys": true }
 ```
 
 ### `sortCompare`
@@ -994,8 +994,8 @@ Locale to use for locale-aware sorting (only applies when `sortCompare` is `"loc
 
 ```jsonc
 {
-  "i18n-ally-next.sortCompare": "locale",
-  "i18n-ally-next.sortLocale": "zh-CN"
+  "i18n-ally-community.sortCompare": "locale",
+  "i18n-ally-community.sortLocale": "zh-CN"
 }
 ```
 
@@ -1019,7 +1019,7 @@ Keys manually marked as "in use". These keys won't be reported as unused even if
 
 ```jsonc
 {
-  "i18n-ally-next.keysInUse": [
+  "i18n-ally-community.keysInUse": [
     "errors.*",
     "dynamic.key.prefix.*"
   ]
@@ -1036,7 +1036,7 @@ Rules for derived keys like plurals or context variants.
 
 ```jsonc
 {
-  "i18n-ally-next.usage.derivedKeyRules": [
+  "i18n-ally-community.usage.derivedKeyRules": [
     "{key}_one",
     "{key}_other",
     "{key}_zero",
@@ -1055,7 +1055,7 @@ Glob patterns for files to ignore when scanning for key usage.
 
 ```jsonc
 {
-  "i18n-ally-next.usage.scanningIgnore": [
+  "i18n-ally-community.usage.scanningIgnore": [
     "dist/**",
     "**/*.test.ts",
     "**/*.spec.ts"
@@ -1099,7 +1099,7 @@ Glob patterns for locale files to ignore.
 
 ```jsonc
 {
-  "i18n-ally-next.ignoreFiles": [
+  "i18n-ally-community.ignoreFiles": [
     "**/*.backup.json",
     "**/generated/**"
   ]

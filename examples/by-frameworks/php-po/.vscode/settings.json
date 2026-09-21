@@ -1,6 +1,6 @@
 {
-  "i18n-ally-next.enabledFrameworks": [
+  "i18n-ally-community.enabledFrameworks": [
     "php-gettext"
   ],
-  "i18n-ally-next.localesPaths": "locale"
+  "i18n-ally-community.localesPaths": "locale"
 }

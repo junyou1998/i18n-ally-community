@@ -1,6 +1,6 @@
 # 正则匹配
 
-自定义 i18n Ally Next 如何在源代码中检测 i18n 键。
+自定义 i18n Ally Community 如何在源代码中检测 i18n 键。
 
 ## 工作原理
 
@@ -13,7 +13,7 @@
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.regex.usageMatch": [
+  "i18n-ally-community.regex.usageMatch": [
     "\\Wt\\(\\s*['\"`]({key})['\"`]",
     "\\Wi18n\\.t\\(\\s*['\"`]({key})['\"`]"
   ]
@@ -26,7 +26,7 @@
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\WformatMessage\\(\\s*\\{\\s*id:\\s*['\"`]({key})['\"`]"
   ]
 }
@@ -45,7 +45,7 @@
 
 ```jsonc
 {
-  "i18n-ally-next.regex.key": "[\\w.:-]+"
+  "i18n-ally-community.regex.key": "[\\w.:-]+"
 }
 ```
 
@@ -57,7 +57,7 @@
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\$t\\(\\s*['\"`]({key})['\"`]"
   ]
 }
@@ -67,7 +67,7 @@
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\Wid=['\"`]({key})['\"`]"
   ]
 }
@@ -77,7 +77,7 @@
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\Wtranslate\\(\\s*['\"`]({key})['\"`]"
   ]
 }

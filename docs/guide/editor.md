@@ -1,12 +1,12 @@
 # Visual Translation Editor
 
-i18n Ally Next includes a built-in Webview translation editor that provides a more intuitive editing experience than working directly with JSON/YAML locale files.
+i18n Ally Community includes a built-in Webview translation editor that provides a more intuitive editing experience than working directly with JSON/YAML locale files.
 
 ## Opening the Editor
 
 There are several ways to open the editor:
 
-- **Command Palette** — Run `i18n Ally Next: Open Editor` (`Cmd+Shift+P`)
+- **Command Palette** — Run `i18n Ally Community: Open Editor` (`Cmd+Shift+P`)
 - **Hover Menu** — Hover over a translation key in code and click the editor icon
 - **Tree View** — Click a key in the i18n Ally sidebar
 
@@ -43,7 +43,7 @@ When opened from the command palette without a supported file active, the editor
 // .vscode/settings.json
 {
   // When hovering over a key, prefer opening the editor instead of inline editing
-  "i18n-ally-next.editor.preferEditor": true
+  "i18n-ally-community.editor.preferEditor": true
 }
 ```
 

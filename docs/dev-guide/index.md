@@ -1,6 +1,6 @@
 # Plugin Development Guide
 
-This guide series provides development references for maintainers of the i18n Ally Next plugin, covering project structure, development workflow, core architecture, testing system, and real-world refactoring experience.
+This guide series provides development references for maintainers of the i18n Ally Community plugin, covering project structure, development workflow, core architecture, testing system, and real-world refactoring experience.
 
 ## Quick Start
 

@@ -227,7 +227,7 @@ export class EditorPanel {
 
   init() {
     this._panel.iconPath = Uri.file(
-      path.join(this._ctx.extensionPath, 'res/logo.svg'),
+      path.join(this._ctx.extensionPath, 'res/logo.png'),
     )
     const editorDistUri = this._panel.webview.asWebviewUri(
       Uri.file(path.join(this._ctx.extensionPath, 'res/editor')),

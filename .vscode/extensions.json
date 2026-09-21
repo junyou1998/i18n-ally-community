@@ -3,7 +3,7 @@
   // for the documentation about the extensions.json format
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "lydanne.i18n-ally-next",
+    "junyou1998.i18n-ally-community",
     "amodio.tsl-problem-matcher"
   ]
 }

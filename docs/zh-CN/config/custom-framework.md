@@ -1,13 +1,13 @@
-# .vscode/i18n-ally-next-custom-framework.yml
+# .vscode/i18n-ally-community-custom-framework.yml
 
-自定义框架配置文件位于项目根目录的 `.vscode/i18n-ally-next-custom-framework.yml`。该文件告诉插件如何检测和处理非原生支持的 i18n 框架的翻译键。
+自定义框架配置文件位于项目根目录的 `.vscode/i18n-ally-community-custom-framework.yml`。该文件告诉插件如何检测和处理非原生支持的 i18n 框架的翻译键。
 
 ::: tip
 如需分步指南和示例，请参阅[自定义框架指南](/zh-CN/guide/custom-framework)。
 :::
 
 ```yaml
-# .vscode/i18n-ally-next-custom-framework.yml
+# .vscode/i18n-ally-community-custom-framework.yml
 languageIds:
   - typescript
   - typescriptreact
@@ -51,7 +51,7 @@ languageIds:
 - **类型**：`string | string[]`
 - **必填**：是
 
-检测代码中 i18n 键的正则表达式。使用 `{key}` 作为占位符，它会被替换为实际的键匹配模式（可通过 settings.json 中的 `i18n-ally-next.regex.key` 配置）。
+检测代码中 i18n 键的正则表达式。使用 `{key}` 作为占位符，它会被替换为实际的键匹配模式（可通过 settings.json 中的 `i18n-ally-community.regex.key` 配置）。
 
 正则表达式**必须**包含捕获组 `({key})` 来提取键值。
 
@@ -116,7 +116,7 @@ locales/
 使用命名空间时，需要在 `settings.json` 中配置 `pathMatcher`：
 
 ```jsonc
-{ "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json" }
+{ "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json" }
 ```
 
 :::

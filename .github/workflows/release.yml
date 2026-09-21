@@ -42,17 +42,6 @@ jobs:
       - name: Package VSIX
         run: pnpm exec vsce package --no-dependencies
 
-      # TODO: 配置 VSCE_TOKEN 后启用 VS Code Marketplace 发布
-      # - name: Publish to VS Code Marketplace
-      #   run: pnpm exec vsce publish --no-dependencies -p ${{secrets.VSCE_TOKEN}}
-      #   env:
-      #     VSCE_TOKEN: ${{secrets.VSCE_TOKEN}}
-
-      - name: Publish to Open VSX
-        run: pnpx ovsx publish *.vsix -p ${{secrets.OVSX_TOKEN}}
-        env:
-          OVSX_TOKEN: ${{secrets.OVSX_TOKEN}}
-
       - name: Upload VSIX to GitHub Release
         run: gh release upload ${{github.ref_name}} *.vsix --clobber
         env:

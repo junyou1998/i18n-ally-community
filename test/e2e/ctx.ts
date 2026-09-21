@@ -16,7 +16,7 @@ export function timeout(ms = 1000) {
 }
 
 export function getExt() {
-  return extensions.getExtension('lydanne.i18n-ally-next')!
+  return extensions.getExtension('junyou1998.i18n-ally-community')!
 }
 
 export async function openFile(name: string) {

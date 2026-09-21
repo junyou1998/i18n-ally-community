@@ -5,11 +5,11 @@
 1. Check if the extension is enabled — look for the i18n Ally icon in the activity bar
 2. Ensure your project has a supported framework dependency in `package.json`
 3. Verify `localesPaths` is correctly configured
-4. Open the Output panel → select **i18n Ally Next** to see logs
+4. Open the Output panel → select **i18n Ally Community** to see logs
 
 ## Annotations are not showing
 
-- Check `i18n-ally-next.annotations` is `true`
+- Check `i18n-ally-community.annotations` is `true`
 - Ensure `displayLanguage` is set and the locale file exists
 - Verify the file language ID is supported by the framework
 
@@ -23,7 +23,7 @@
 
 1. Ensure your framework supports namespace (see [Namespace](/guide/namespace))
 2. For i18next / react-i18next, namespace is auto-enabled
-3. For other frameworks, set `"i18n-ally-next.namespace": true`
+3. For other frameworks, set `"i18n-ally-community.namespace": true`
 4. Verify your locale files follow the `{locale}/{namespace}.{ext}` structure
 5. Check `dirStructure` is set to `"dir"` (not `"file"`)
 
@@ -41,7 +41,7 @@ Set `localesPaths` with resource scope in each workspace folder:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["packages/app/locales"]
+  "i18n-ally-community.localesPaths": ["packages/app/locales"]
 }
 ```
 
@@ -49,7 +49,7 @@ Set `localesPaths` with resource scope in each workspace folder:
 
 ```jsonc
 {
-  "i18n-ally-next.disabled": true
+  "i18n-ally-community.disabled": true
 }
 ```
 

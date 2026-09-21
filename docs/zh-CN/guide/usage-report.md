@@ -1,6 +1,6 @@
 # 使用报告与键管理
 
-i18n Ally Next 会分析翻译键在代码库中的使用情况，帮助你识别未使用的键、缺失的翻译，并维护整洁的 locale 文件结构。
+i18n Ally Community 会分析翻译键在代码库中的使用情况，帮助你识别未使用的键、缺失的翻译，并维护整洁的 locale 文件结构。
 
 ## 使用报告
 
@@ -28,7 +28,7 @@ i18n Ally Next 会分析翻译键在代码库中的使用情况，帮助你识�
 
 手动刷新报告：
 
-- **命令面板** — 运行 `i18n Ally Next: Refresh Usage Report`
+- **命令面板** — 运行 `i18n Ally Community: Refresh Usage Report`
 - **侧边栏** — 点击树视图标题中的刷新图标
 
 ## 键管理操作
@@ -52,7 +52,7 @@ i18n Ally Next 会分析翻译键在代码库中的使用情况，帮助你识�
 ```jsonc
 {
   // 在 locale 文件中保留已补全的（空值）键
-  "i18n-ally-next.keepFulfilled": true
+  "i18n-ally-community.keepFulfilled": true
 }
 ```
 
@@ -67,7 +67,7 @@ i18n Ally Next 会分析翻译键在代码库中的使用情况，帮助你识�
 
 ```jsonc
 {
-  "i18n-ally-next.keysInUse": [
+  "i18n-ally-community.keysInUse": [
     "common.ok",
     "errors.*",
     "validation.**"
@@ -81,7 +81,7 @@ i18n Ally Next 会分析翻译键在代码库中的使用情况，帮助你识�
 
 ```jsonc
 {
-  "i18n-ally-next.usage.derivedKeyRules": [
+  "i18n-ally-community.usage.derivedKeyRules": [
     "{key}_one",
     "{key}_other",
     "{key}_zero",
@@ -101,7 +101,7 @@ i18n Ally Next 会分析翻译键在代码库中的使用情况，帮助你识�
 ```jsonc
 {
   // 使用扫描时忽略的 glob 模式
-  "i18n-ally-next.usage.scanningIgnore": [
+  "i18n-ally-community.usage.scanningIgnore": [
     "dist/**",
     "node_modules/**",
     "*.test.ts"

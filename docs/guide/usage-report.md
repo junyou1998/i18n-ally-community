@@ -1,6 +1,6 @@
 # Usage Report & Key Management
 
-i18n Ally Next analyzes how translation keys are used across your codebase, helping you identify unused keys, missing translations, and maintain a clean locale file structure.
+i18n Ally Community analyzes how translation keys are used across your codebase, helping you identify unused keys, missing translations, and maintain a clean locale file structure.
 
 ## Usage Report
 
@@ -28,7 +28,7 @@ The usage report is displayed in the **i18n Ally sidebar** under the tree view. 
 
 To refresh the report manually:
 
-- **Command Palette** — Run `i18n Ally Next: Refresh Usage Report`
+- **Command Palette** — Run `i18n Ally Community: Refresh Usage Report`
 - **Sidebar** — Click the refresh icon in the tree view header
 
 ## Key Management Operations
@@ -52,7 +52,7 @@ Create empty entries for all missing keys across all languages, making it easy t
 ```jsonc
 {
   // Keep fulfilled (empty) keys in locale files
-  "i18n-ally-next.keepFulfilled": true
+  "i18n-ally-community.keepFulfilled": true
 }
 ```
 
@@ -67,7 +67,7 @@ The key is added to the `keysInUse` configuration. This setting also supports **
 
 ```jsonc
 {
-  "i18n-ally-next.keysInUse": [
+  "i18n-ally-community.keysInUse": [
     "common.ok",
     "errors.*",
     "validation.**"
@@ -81,7 +81,7 @@ Some frameworks generate keys dynamically (e.g., pluralization: `item`, `item_on
 
 ```jsonc
 {
-  "i18n-ally-next.usage.derivedKeyRules": [
+  "i18n-ally-community.usage.derivedKeyRules": [
     "{key}_one",
     "{key}_other",
     "{key}_zero",
@@ -101,7 +101,7 @@ Control which files are scanned for usage analysis:
 ```jsonc
 {
   // Glob patterns to ignore during usage scanning
-  "i18n-ally-next.usage.scanningIgnore": [
+  "i18n-ally-community.usage.scanningIgnore": [
     "dist/**",
     "node_modules/**",
     "*.test.ts"

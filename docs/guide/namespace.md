@@ -84,7 +84,7 @@ For frameworks without built-in namespace support, enable it manually:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.namespace": true
+  "i18n-ally-community.namespace": true
 }
 ```
 
@@ -94,7 +94,7 @@ If most of your keys belong to one namespace, set a default:
 
 ```jsonc
 {
-  "i18n-ally-next.defaultNamespace": "common"
+  "i18n-ally-community.defaultNamespace": "common"
 }
 ```
 
@@ -106,7 +106,7 @@ If your file structure doesn't follow the default pattern, use a custom path mat
 
 ```jsonc
 {
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.{ext}"
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.{ext}"
 }
 ```
 
@@ -115,7 +115,7 @@ If your file structure doesn't follow the default pattern, use a custom path mat
 You can enable namespace in a [custom framework](/guide/custom-framework) config:
 
 ```yaml
-# .vscode/i18n-ally-next-custom-framework.yml
+# .vscode/i18n-ally-community-custom-framework.yml
 languageIds:
   - typescript
   - typescriptreact

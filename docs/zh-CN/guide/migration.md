@@ -1,15 +1,15 @@
 # 从 i18n-ally 迁移
 
-如果你正在从原版 **i18n-ally** 扩展迁移到 **i18n-ally-next**，本指南将帮助你转移现有配置。
+如果你正在从原版 **i18n-ally** 扩展迁移到 **i18n-ally-community**，本指南将帮助你转移现有配置。
 
 ## 自动迁移
 
-i18n Ally Next 提供了内置的迁移命令，可以自动转移你的配置。
+i18n Ally Community 提供了内置的迁移命令，可以自动转移你的配置。
 
 ### 运行迁移命令
 
 1. 打开命令面板 (`Ctrl+Shift+P` / `Cmd+Shift+P`)
-2. 搜索 **"i18n Ally Next: 从 i18n-ally 迁移"**
+2. 搜索 **"i18n Ally Community: 从 i18n-ally 迁移"**
 3. 查看迁移摘要并确认
 
 ### 迁移内容
@@ -18,10 +18,10 @@ i18n Ally Next 提供了内置的迁移命令，可以自动转移你的配置�
 
 | 项目 | 原位置 | 新位置 |
 | ---- | ------ | ------ |
-| **工作区设置** | `i18n-ally.*` / `vue-i18n-ally.*` | `i18n-ally-next.*` |
-| **全局设置** | `i18n-ally.*` / `vue-i18n-ally.*` | `i18n-ally-next.*` |
-| **自定义框架** | `.vscode/i18n-ally-custom-framework.yml` | `.vscode/i18n-ally-next-custom-framework.yml` |
-| **审阅文件** | `.vscode/i18n-ally-reviews.yml` | `.vscode/i18n-ally-next-reviews.yml` |
+| **工作区设置** | `i18n-ally.*` / `vue-i18n-ally.*` | `i18n-ally-community.*` |
+| **全局设置** | `i18n-ally.*` / `vue-i18n-ally.*` | `i18n-ally-community.*` |
+| **自定义框架** | `.vscode/i18n-ally-custom-framework.yml` | `.vscode/i18n-ally-community-custom-framework.yml` |
+| **审阅文件** | `.vscode/i18n-ally-reviews.yml` | `.vscode/i18n-ally-community-reviews.yml` |
 
 ## 手动迁移
 
@@ -29,16 +29,16 @@ i18n Ally Next 提供了内置的迁移命令，可以自动转移你的配置�
 
 ### 1. 更新设置
 
-在 `.vscode/settings.json` 中，将所有 `i18n-ally.*` 或 `vue-i18n-ally.*` 设置重命名为 `i18n-ally-next.*`：
+在 `.vscode/settings.json` 中，将所有 `i18n-ally.*` 或 `vue-i18n-ally.*` 设置重命名为 `i18n-ally-community.*`：
 
 ```diff
 {
 -  "i18n-ally.localesPaths": ["src/locales"],
 -  "i18n-ally.sourceLanguage": "en",
 -  "i18n-ally.displayLanguage": "zh-CN"
-+  "i18n-ally-next.localesPaths": ["src/locales"],
-+  "i18n-ally-next.sourceLanguage": "en",
-+  "i18n-ally-next.displayLanguage": "zh-CN"
++  "i18n-ally-community.localesPaths": ["src/locales"],
++  "i18n-ally-community.sourceLanguage": "en",
++  "i18n-ally-community.displayLanguage": "zh-CN"
 }
 ```
 
@@ -49,7 +49,7 @@ i18n Ally Next 提供了内置的迁移命令，可以自动转移你的配置�
 如果你有自定义框架配置：
 
 ```bash
-mv .vscode/i18n-ally-custom-framework.yml .vscode/i18n-ally-next-custom-framework.yml
+mv .vscode/i18n-ally-custom-framework.yml .vscode/i18n-ally-community-custom-framework.yml
 ```
 
 ### 3. 重命名审阅文件
@@ -57,12 +57,12 @@ mv .vscode/i18n-ally-custom-framework.yml .vscode/i18n-ally-next-custom-framewor
 如果你使用审阅功能：
 
 ```bash
-mv .vscode/i18n-ally-reviews.yml .vscode/i18n-ally-next-reviews.yml
+mv .vscode/i18n-ally-reviews.yml .vscode/i18n-ally-community-reviews.yml
 ```
 
 ## 向后兼容
 
-i18n Ally Next 保持了对部分旧版设置的向后兼容：
+i18n Ally Community 保持了对部分旧版设置的向后兼容：
 
 - **`vue-i18n-ally.*`** 设置仍会被读取（但已弃用）
 - **`i18n-ally.*`** 设置也会被检测并迁移
@@ -82,7 +82,7 @@ i18n Ally Next 保持了对部分旧版设置的向后兼容：
 
 ### 找不到迁移命令
 
-确保你安装的是 **i18n Ally Next**（发布者：`lydanne`），而不是原版 i18n-ally。
+确保你安装的是 **i18n Ally Community**（发布者：`junyou1998`），而不是原版 i18n-ally。
 
 ### 设置未生效
 
@@ -96,5 +96,5 @@ i18n Ally Next 保持了对部分旧版设置的向后兼容：
 验证文件是否正确重命名，且内容是有效的 YAML：
 
 ```bash
-cat .vscode/i18n-ally-next-custom-framework.yml
+cat .vscode/i18n-ally-community-custom-framework.yml
 ```

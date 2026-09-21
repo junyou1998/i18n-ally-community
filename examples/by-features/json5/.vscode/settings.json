@@ -1,8 +1,8 @@
 {
-  "i18n-ally-next.localesPaths": [
+  "i18n-ally-community.localesPaths": [
     "locales"
   ],
-  "i18n-ally-next.parsers.extendFileExtensions": {
+  "i18n-ally-community.parsers.extendFileExtensions": {
     "my-custom-ext": "json5"
   }
 }

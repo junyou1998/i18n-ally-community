@@ -1,6 +1,6 @@
 # Extract Hard Strings
 
-i18n Ally Next can detect hard-coded strings in your source code and help you extract them into locale files.
+i18n Ally Community can detect hard-coded strings in your source code and help you extract them into locale files.
 
 ## Auto Detection
 
@@ -9,7 +9,7 @@ Enable auto-detection to highlight hard-coded strings in real time:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.extract.autoDetect": true
+  "i18n-ally-community.extract.autoDetect": true
 }
 ```
 
@@ -38,16 +38,16 @@ Control how keys are auto-generated:
   // "empty" — generates empty keys (for manual input)
   // "source" — uses the source text as key
   // "template" — generates keys from a template (see below)
-  "i18n-ally-next.extract.keygenStrategy": "slug",
+  "i18n-ally-community.extract.keygenStrategy": "slug",
 
   // Key name style: "default", "camelCase", "PascalCase", "snake_case", "kebab-case"
-  "i18n-ally-next.extract.keygenStyle": "default",
+  "i18n-ally-community.extract.keygenStyle": "default",
 
   // Maximum key length
-  "i18n-ally-next.extract.keyMaxLength": 50,
+  "i18n-ally-community.extract.keyMaxLength": 50,
 
   // Prefix for generated keys
-  "i18n-ally-next.extract.keyPrefix": ""
+  "i18n-ally-community.extract.keyPrefix": ""
 }
 ```
 
@@ -57,8 +57,8 @@ When `keygenStrategy` is set to `"template"`, keys are generated from a customiz
 
 ```jsonc
 {
-  "i18n-ally-next.extract.keygenStrategy": "template",
-  "i18n-ally-next.extract.keygenTemplate": "{{dirname}}:{{filename}}"
+  "i18n-ally-community.extract.keygenStrategy": "template",
+  "i18n-ally-community.extract.keygenTemplate": "{{dirname}}:{{filename}}"
 }
 ```
 
@@ -105,7 +105,7 @@ When multiple locale files exist, control how the target file is selected:
   // "most-similar-by-key" — pick by key prefix match
   // "file-previous" — remember per-file selection
   // "global-previous" — remember globally
-  "i18n-ally-next.extract.targetPickingStrategy": "none"
+  "i18n-ally-community.extract.targetPickingStrategy": "none"
 }
 ```
 
@@ -115,11 +115,11 @@ Exclude specific strings from detection:
 
 ```jsonc
 {
-  "i18n-ally-next.extract.ignored": [
+  "i18n-ally-community.extract.ignored": [
     "TODO",
     "FIXME"
   ],
-  "i18n-ally-next.extract.ignoredByFiles": {
+  "i18n-ally-community.extract.ignoredByFiles": {
     "src/constants.ts": ["SOME_CONSTANT"]
   }
 }
@@ -131,7 +131,7 @@ Customize the code that replaces the extracted string:
 
 ```jsonc
 {
-  "i18n-ally-next.refactor.templates": [
+  "i18n-ally-community.refactor.templates": [
     {
       "source": "js-string",
       "templates": ["t('{key}')"]
@@ -148,11 +148,11 @@ Available sources: `html-attribute`, `html-inline`, `js-string`, `js-template`, 
 
 ## Project-wide Scan & Extract
 
-Beyond single-file and batch extraction, i18n Ally Next supports **scanning the entire project** for hard-coded strings and extracting them all at once.
+Beyond single-file and batch extraction, i18n Ally Community supports **scanning the entire project** for hard-coded strings and extracting them all at once.
 
 ### Running the Scan
 
-Run `i18n Ally Next: Scan and Extract All` from the Command Palette.
+Run `i18n Ally Community: Scan and Extract All` from the Command Palette.
 
 The process:
 
@@ -169,12 +169,12 @@ Control which files are included or excluded from scanning:
 {
   // Glob patterns for files to include in scanning
   // If empty, uses the default supported language glob
-  "i18n-ally-next.extract.scanningInclude": [
+  "i18n-ally-community.extract.scanningInclude": [
     "src/**/*.{ts,tsx,vue,js,jsx}"
   ],
 
   // Glob patterns for files to ignore during scanning
-  "i18n-ally-next.extract.scanningIgnore": [
+  "i18n-ally-community.extract.scanningIgnore": [
     "src/generated/**",
     "src/**/*.test.*",
     "src/**/*.spec.*"

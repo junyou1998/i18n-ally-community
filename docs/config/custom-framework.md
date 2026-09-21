@@ -1,13 +1,13 @@
-# .vscode/i18n-ally-next-custom-framework.yml
+# .vscode/i18n-ally-community-custom-framework.yml
 
-Custom framework configuration is defined in `.vscode/i18n-ally-next-custom-framework.yml` at your project root. This file tells the extension how to detect and handle i18n keys for frameworks that are not natively supported.
+Custom framework configuration is defined in `.vscode/i18n-ally-community-custom-framework.yml` at your project root. This file tells the extension how to detect and handle i18n keys for frameworks that are not natively supported.
 
 ::: tip
 For a step-by-step guide with examples, see [Custom Framework Guide](/guide/custom-framework).
 :::
 
 ```yaml
-# .vscode/i18n-ally-next-custom-framework.yml
+# .vscode/i18n-ally-community-custom-framework.yml
 languageIds:
   - typescript
   - typescriptreact
@@ -51,7 +51,7 @@ Supported values: `javascript`, `typescript`, `javascriptreact`, `typescriptreac
 - **Type**: `string | string[]`
 - **Required**: Yes
 
-Regex patterns to detect i18n keys in code. Use `{key}` as placeholder, which will be replaced by the actual key matching pattern (configurable via `i18n-ally-next.regex.key` in settings.json).
+Regex patterns to detect i18n keys in code. Use `{key}` as placeholder, which will be replaced by the actual key matching pattern (configurable via `i18n-ally-community.regex.key` in settings.json).
 
 The regex **must** contain a capture group `({key})` to extract the key value.
 
@@ -116,7 +116,7 @@ locales/
 When using namespaces, configure `pathMatcher` in your `settings.json`:
 
 ```jsonc
-{ "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json" }
+{ "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json" }
 ```
 
 :::

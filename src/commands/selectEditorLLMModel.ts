@@ -29,7 +29,7 @@ async function selectEditorLLMModel(): Promise<void> {
   })
   if (!selected)
     return
-  const config = workspace.getConfiguration('i18n-ally-next')
+  const config = workspace.getConfiguration('i18n-ally-community')
   await config.update('translate.editor-llm.model', selected.modelId, false)
   const engines = config.get<string[]>('translate.engines') ?? []
   if (!engines.includes('editor-llm')) {

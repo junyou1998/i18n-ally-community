@@ -1,6 +1,6 @@
 # Best Practices
 
-This guide covers recommended configurations, workflows, and tips for using i18n Ally Next effectively.
+This guide covers recommended configurations, workflows, and tips for using i18n Ally Community effectively.
 
 ## Framework Guides
 
@@ -37,7 +37,7 @@ Detailed setup and usage patterns for each framework:
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["google"]
+  "i18n-ally-community.translate.engines": ["google"]
 }
 ```
 
@@ -47,8 +47,8 @@ Detailed setup and usage patterns for each framework:
 
 ```jsonc
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.ignoreFiles": ["node_modules/**", "dist/**"]
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.ignoreFiles": ["node_modules/**", "dist/**"]
 }
 ```
 
@@ -57,6 +57,6 @@ Detailed setup and usage patterns for each framework:
 
 ```jsonc
 {
-  "i18n-ally-next.enabledParsers": ["json"]
+  "i18n-ally-community.enabledParsers": ["json"]
 }
 ```

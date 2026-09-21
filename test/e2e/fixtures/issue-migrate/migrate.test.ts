@@ -31,8 +31,8 @@ setupTest('Migration Command', () => {
     })
 
     it('new config files do not exist yet', () => {
-      const newCustomFramework = path.join(rootPath, '.vscode/i18n-ally-next-custom-framework.yml')
-      const newReviews = path.join(rootPath, '.vscode/i18n-ally-next-reviews.yml')
+      const newCustomFramework = path.join(rootPath, '.vscode/i18n-ally-community-custom-framework.yml')
+      const newReviews = path.join(rootPath, '.vscode/i18n-ally-community-reviews.yml')
       expect(fs.existsSync(newCustomFramework)).to.equal(false)
       expect(fs.existsSync(newReviews)).to.equal(false)
     })
@@ -46,16 +46,16 @@ setupTest('Migration Command', () => {
       expect(settings['i18n-ally.keystyle']).to.equal('nested')
     })
 
-    it('legacy settings.json does not contain i18n-ally-next config', () => {
+    it('legacy settings.json does not contain i18n-ally-community config', () => {
       const content = fs.readFileSync(settingsPath, 'utf-8')
       const settings = JSON.parse(content)
-      is(settings['i18n-ally-next.localesPaths'] === undefined, true)
+      is(settings['i18n-ally-community.localesPaths'] === undefined, true)
     })
   })
 
   describe('execute migration', () => {
     it('runs migration command successfully', async () => {
-      await commands.executeCommand('i18n-ally-next.migrate-from-i18n-ally')
+      await commands.executeCommand('i18n-ally-community.migrate-from-i18n-ally')
       await timeout(3000)
     })
   })
@@ -67,7 +67,7 @@ setupTest('Migration Command', () => {
     })
 
     it('creates new custom framework file with correct content', () => {
-      const newPath = path.join(rootPath, '.vscode/i18n-ally-next-custom-framework.yml')
+      const newPath = path.join(rootPath, '.vscode/i18n-ally-community-custom-framework.yml')
       expect(fs.existsSync(newPath)).to.equal(true)
       const content = fs.readFileSync(newPath, 'utf-8')
       expect(content).to.include('languageIds')
@@ -83,7 +83,7 @@ setupTest('Migration Command', () => {
     })
 
     it('creates new reviews file with correct content', () => {
-      const newPath = path.join(rootPath, '.vscode/i18n-ally-next-reviews.yml')
+      const newPath = path.join(rootPath, '.vscode/i18n-ally-community-reviews.yml')
       expect(fs.existsSync(newPath)).to.equal(true)
       const content = fs.readFileSync(newPath, 'utf-8')
       expect(content).to.include('reviews')
@@ -96,25 +96,25 @@ setupTest('Migration Command', () => {
     it('migrates localesPaths to new namespace in settings.json', () => {
       const content = fs.readFileSync(settingsPath, 'utf-8')
       const settings = JSON.parse(content)
-      expect(settings['i18n-ally-next.localesPaths']).to.eql(['locales'])
+      expect(settings['i18n-ally-community.localesPaths']).to.eql(['locales'])
     })
 
     it('migrates sourceLanguage to new namespace in settings.json', () => {
       const content = fs.readFileSync(settingsPath, 'utf-8')
       const settings = JSON.parse(content)
-      expect(settings['i18n-ally-next.sourceLanguage']).to.equal('en')
+      expect(settings['i18n-ally-community.sourceLanguage']).to.equal('en')
     })
 
     it('migrates displayLanguage to new namespace in settings.json', () => {
       const content = fs.readFileSync(settingsPath, 'utf-8')
       const settings = JSON.parse(content)
-      expect(settings['i18n-ally-next.displayLanguage']).to.equal('zh-CN')
+      expect(settings['i18n-ally-community.displayLanguage']).to.equal('zh-CN')
     })
 
     it('migrates keystyle to new namespace in settings.json', () => {
       const content = fs.readFileSync(settingsPath, 'utf-8')
       const settings = JSON.parse(content)
-      expect(settings['i18n-ally-next.keystyle']).to.equal('nested')
+      expect(settings['i18n-ally-community.keystyle']).to.equal('nested')
     })
 
     it('clears legacy config from settings.json', () => {

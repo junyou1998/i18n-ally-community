@@ -1,12 +1,12 @@
 # 可视化翻译编辑器
 
-i18n Ally Next 内置了一个 Webview 翻译编辑面板，提供比直接编辑 JSON/YAML 语言文件更直观的编辑体验。
+i18n Ally Community 内置了一个 Webview 翻译编辑面板，提供比直接编辑 JSON/YAML 语言文件更直观的编辑体验。
 
 ## 打开编辑器
 
 有多种方式打开编辑器：
 
-- **命令面板** — 运行 `i18n Ally Next: Open Editor`（`Cmd+Shift+P`）
+- **命令面板** — 运行 `i18n Ally Community: Open Editor`（`Cmd+Shift+P`）
 - **悬停菜单** — 悬停在代码中的翻译键上，点击编辑器图标
 - **侧边栏** — 在 i18n Ally 侧边栏中点击某个键
 
@@ -43,7 +43,7 @@ i18n Ally Next 内置了一个 Webview 翻译编辑面板，提供比直接编�
 // .vscode/settings.json
 {
   // 悬停在键上时，优先打开编辑器而非内联编辑
-  "i18n-ally-next.editor.preferEditor": true
+  "i18n-ally-community.editor.preferEditor": true
 }
 ```
 

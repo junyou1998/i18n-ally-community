@@ -28,7 +28,7 @@ export class HardStringDetectResultItem extends BaseTreeItem implements ExtractT
     this.isInsert = false
     this.isDynamic = detection.isDynamic
 
-    this.contextValue = 'i18n-ally-next-hard-string-item'
+    this.contextValue = 'i18n-ally-community-hard-string-item'
     this.label = this.detection.text.trim()
 
     this.range = new Range(

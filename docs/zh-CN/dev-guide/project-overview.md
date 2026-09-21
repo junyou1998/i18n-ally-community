@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-i18n Ally Next 是一个 VS Code 扩展插件，用于国际化（i18n）工作流的辅助开发。它支持多种 i18n 框架（如 i18next、vue-i18n、react-intl 等），提供翻译 key 的内联显示、跳转定义、自动补全、硬编码字符串提取、翻译管理等功能。
+i18n Ally Community 是一个 VS Code 扩展插件，用于国际化（i18n）工作流的辅助开发。它支持多种 i18n 框架（如 i18next、vue-i18n、react-intl 等），提供翻译 key 的内联显示、跳转定义、自动补全、硬编码字符串提取、翻译管理等功能。
 
 ## 技术栈
 
@@ -15,7 +15,7 @@ i18n Ally Next 是一个 VS Code 扩展插件，用于国际化（i18n）工作�
 ## 目录结构
 
 ```text
-i18n-ally-next/
+i18n-ally-community/
 ├── src/                        # 源代码
 │   ├── extension.ts            # 插件入口，注册所有模块
 │   ├── core/                   # 核心模块

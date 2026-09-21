@@ -1,11 +1,11 @@
 {
-  "i18n-ally-next.enabledFrameworks": ["vue", "general"],
-  "i18n-ally-next.localesPaths": ".",
-  "i18n-ally-next.pathMatcher": "messages.{locale}.json",
-  "i18n-ally-next.enabledParsers": ["json"],
-  "i18n-ally-next.displayLanguage": "en",
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested",
+  "i18n-ally-community.enabledFrameworks": ["vue", "general"],
+  "i18n-ally-community.localesPaths": ".",
+  "i18n-ally-community.pathMatcher": "messages.{locale}.json",
+  "i18n-ally-community.enabledParsers": ["json"],
+  "i18n-ally-community.displayLanguage": "en",
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested",
   "files.associations": {
     "*.vue": "vue"
   }

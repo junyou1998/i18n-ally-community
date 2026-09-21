@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 import llmstxt from 'vitepress-plugin-llms'
 
 export default defineConfig({
-  title: 'i18n Ally Next',
+  title: 'i18n Ally Community',
   description: 'All in one i18n extension for VS Code',
-  base: '/i18n-ally-next/',
+  base: '/i18n-ally-community/',
   lastUpdated: true,
   cleanUrls: true,
 
@@ -29,10 +29,10 @@ export default defineConfig({
           {
             text: 'Links',
             items: [
-              { text: 'VS Code Marketplace', link: 'https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next' },
-              { text: 'Open VSX Registry', link: 'https://open-vsx.org/extension/lydanne/i18n-ally-next' },
-              { text: 'GitHub', link: 'https://github.com/lydanne/i18n-ally-next' },
-              { text: 'Changelog', link: 'https://github.com/lydanne/i18n-ally-next/blob/main/CHANGELOG.md' },
+              { text: 'VS Code Marketplace', link: 'https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community' },
+              { text: 'Open VSX Registry', link: 'https://open-vsx.org/extension/junyou1998/i18n-ally-community' },
+              { text: 'GitHub', link: 'https://github.com/junyou1998/i18n-ally-community' },
+              { text: 'Changelog', link: 'https://github.com/junyou1998/i18n-ally-community/blob/main/CHANGELOG.md' },
             ],
           },
         ],
@@ -87,7 +87,7 @@ export default defineConfig({
               items: [
                 { text: 'Overview', link: '/config/' },
                 { text: '.vscode/settings.json', link: '/config/settings' },
-                { text: '.vscode/i18n-ally-next-custom-framework.yml', link: '/config/custom-framework' },
+                { text: '.vscode/i18n-ally-community-custom-framework.yml', link: '/config/custom-framework' },
               ],
             },
           ],
@@ -115,7 +115,7 @@ export default defineConfig({
               text: 'Blog',
               items: [
                 { text: 'All Posts', link: '/blog/' },
-                { text: 'Introducing i18n Ally Next', link: '/blog/introducing-i18n-ally-next' },
+                { text: 'Introducing i18n Ally Community', link: '/blog/introducing-i18n-ally-next' },
               ],
             },
           ],
@@ -134,10 +134,10 @@ export default defineConfig({
           {
             text: '链接',
             items: [
-              { text: 'VS Code 插件市场', link: 'https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next' },
-              { text: 'Open VSX Registry', link: 'https://open-vsx.org/extension/lydanne/i18n-ally-next' },
-              { text: 'GitHub', link: 'https://github.com/lydanne/i18n-ally-next' },
-              { text: '更新日志', link: 'https://github.com/lydanne/i18n-ally-next/blob/main/CHANGELOG.md' },
+              { text: 'VS Code 插件市场', link: 'https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community' },
+              { text: 'Open VSX Registry', link: 'https://open-vsx.org/extension/junyou1998/i18n-ally-community' },
+              { text: 'GitHub', link: 'https://github.com/junyou1998/i18n-ally-community' },
+              { text: '更新日志', link: 'https://github.com/junyou1998/i18n-ally-community/blob/main/CHANGELOG.md' },
             ],
           },
         ],
@@ -192,7 +192,7 @@ export default defineConfig({
               items: [
                 { text: '总览', link: '/zh-CN/config/' },
                 { text: '.vscode/settings.json', link: '/zh-CN/config/settings' },
-                { text: '.vscode/i18n-ally-next-custom-framework.yml', link: '/zh-CN/config/custom-framework' },
+                { text: '.vscode/i18n-ally-community-custom-framework.yml', link: '/zh-CN/config/custom-framework' },
               ],
             },
           ],
@@ -220,7 +220,7 @@ export default defineConfig({
               text: '博客',
               items: [
                 { text: '全部文章', link: '/zh-CN/blog/' },
-                { text: 'i18n Ally Next 介绍', link: '/zh-CN/blog/introducing-i18n-ally-next' },
+                { text: 'i18n Ally Community 介绍', link: '/zh-CN/blog/introducing-i18n-ally-next' },
               ],
             },
           ],
@@ -232,14 +232,14 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/lydanne/i18n-ally-next' },
+      { icon: 'github', link: 'https://github.com/junyou1998/i18n-ally-community' },
     ],
     search: {
       provider: 'local',
     },
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025-PRESENT Lydanne',
+      copyright: 'Copyright © 2025-PRESENT Junyou',
     },
   },
 })

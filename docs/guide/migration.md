@@ -1,15 +1,15 @@
 # Migration from i18n-ally
 
-If you are migrating from the original **i18n-ally** extension to **i18n-ally-next**, this guide will help you transfer your existing configuration.
+If you are migrating from the original **i18n-ally** extension to **i18n-ally-community**, this guide will help you transfer your existing configuration.
 
 ## Automatic Migration
 
-i18n Ally Next provides a built-in migration command that automatically transfers your configuration.
+i18n Ally Community provides a built-in migration command that automatically transfers your configuration.
 
 ### Run the Migration Command
 
 1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
-2. Search for **"i18n Ally Next: Migrate from i18n-ally"**
+2. Search for **"i18n Ally Community: Migrate from i18n-ally"**
 3. Review the migration summary and confirm
 
 ### What Gets Migrated
@@ -18,10 +18,10 @@ The migration command handles the following:
 
 | Item | From | To |
 |------|------|-----|
-| **Workspace Settings** | `i18n-ally.*` / `vue-i18n-ally.*` | `i18n-ally-next.*` |
-| **Global Settings** | `i18n-ally.*` / `vue-i18n-ally.*` | `i18n-ally-next.*` |
-| **Custom Framework** | `.vscode/i18n-ally-custom-framework.yml` | `.vscode/i18n-ally-next-custom-framework.yml` |
-| **Reviews File** | `.vscode/i18n-ally-reviews.yml` | `.vscode/i18n-ally-next-reviews.yml` |
+| **Workspace Settings** | `i18n-ally.*` / `vue-i18n-ally.*` | `i18n-ally-community.*` |
+| **Global Settings** | `i18n-ally.*` / `vue-i18n-ally.*` | `i18n-ally-community.*` |
+| **Custom Framework** | `.vscode/i18n-ally-custom-framework.yml` | `.vscode/i18n-ally-community-custom-framework.yml` |
+| **Reviews File** | `.vscode/i18n-ally-reviews.yml` | `.vscode/i18n-ally-community-reviews.yml` |
 
 ## Manual Migration
 
@@ -29,16 +29,16 @@ If you prefer to migrate manually, follow these steps:
 
 ### 1. Update Settings
 
-In your `.vscode/settings.json`, rename all `i18n-ally.*` or `vue-i18n-ally.*` settings to `i18n-ally-next.*`:
+In your `.vscode/settings.json`, rename all `i18n-ally.*` or `vue-i18n-ally.*` settings to `i18n-ally-community.*`:
 
 ```diff
 {
 -  "i18n-ally.localesPaths": ["src/locales"],
 -  "i18n-ally.sourceLanguage": "en",
 -  "i18n-ally.displayLanguage": "zh-CN"
-+  "i18n-ally-next.localesPaths": ["src/locales"],
-+  "i18n-ally-next.sourceLanguage": "en",
-+  "i18n-ally-next.displayLanguage": "zh-CN"
++  "i18n-ally-community.localesPaths": ["src/locales"],
++  "i18n-ally-community.sourceLanguage": "en",
++  "i18n-ally-community.displayLanguage": "zh-CN"
 }
 ```
 
@@ -49,7 +49,7 @@ Also check your global (user-level) settings (`Ctrl+Shift+P` → "Preferences: O
 If you have a custom framework configuration:
 
 ```bash
-mv .vscode/i18n-ally-custom-framework.yml .vscode/i18n-ally-next-custom-framework.yml
+mv .vscode/i18n-ally-custom-framework.yml .vscode/i18n-ally-community-custom-framework.yml
 ```
 
 ### 3. Rename Reviews File
@@ -57,12 +57,12 @@ mv .vscode/i18n-ally-custom-framework.yml .vscode/i18n-ally-next-custom-framewor
 If you use the review feature:
 
 ```bash
-mv .vscode/i18n-ally-reviews.yml .vscode/i18n-ally-next-reviews.yml
+mv .vscode/i18n-ally-reviews.yml .vscode/i18n-ally-community-reviews.yml
 ```
 
 ## Backward Compatibility
 
-i18n Ally Next maintains backward compatibility with some legacy settings:
+i18n Ally Community maintains backward compatibility with some legacy settings:
 
 - **`vue-i18n-ally.*`** settings are still read (but deprecated)
 - **`i18n-ally.*`** settings are also detected and migrated
@@ -82,7 +82,7 @@ After migration, you can safely uninstall the original i18n-ally extension to av
 
 ### Migration Command Not Found
 
-Make sure you have installed **i18n Ally Next** (publisher: `lydanne`), not the original i18n-ally.
+Make sure you have installed **i18n Ally Community** (publisher: `junyou1998`), not the original i18n-ally.
 
 ### Settings Not Applied
 
@@ -96,5 +96,5 @@ If settings don't seem to apply after migration:
 Verify the file was renamed correctly and the content is valid YAML:
 
 ```bash
-cat .vscode/i18n-ally-next-custom-framework.yml
+cat .vscode/i18n-ally-community-custom-framework.yml
 ```

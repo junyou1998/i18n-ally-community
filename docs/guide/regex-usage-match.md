@@ -1,6 +1,6 @@
 # Regex Usage Match
 
-Customize how i18n Ally Next detects i18n keys in your source code using regex patterns.
+Customize how i18n Ally Community detects i18n keys in your source code using regex patterns.
 
 ## How It Works
 
@@ -13,7 +13,7 @@ Replace all framework-provided patterns:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.regex.usageMatch": [
+  "i18n-ally-community.regex.usageMatch": [
     "\\Wt\\(\\s*['\"`]({key})['\"`]",
     "\\Wi18n\\.t\\(\\s*['\"`]({key})['\"`]"
   ]
@@ -26,7 +26,7 @@ Add extra patterns without replacing the defaults:
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\WformatMessage\\(\\s*\\{\\s*id:\\s*['\"`]({key})['\"`]"
   ]
 }
@@ -45,7 +45,7 @@ By default, keys match `[\\w.-]+` (word characters, dots, hyphens). Override it:
 
 ```jsonc
 {
-  "i18n-ally-next.regex.key": "[\\w.:-]+"
+  "i18n-ally-community.regex.key": "[\\w.:-]+"
 }
 ```
 
@@ -57,7 +57,7 @@ This is useful when your keys contain special characters like `:` for namespaces
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\$t\\(\\s*['\"`]({key})['\"`]"
   ]
 }
@@ -67,7 +67,7 @@ This is useful when your keys contain special characters like `:` for namespaces
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\Wid=['\"`]({key})['\"`]"
   ]
 }
@@ -77,7 +77,7 @@ This is useful when your keys contain special characters like `:` for namespaces
 
 ```jsonc
 {
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.regex.usageMatchAppend": [
     "\\Wtranslate\\(\\s*['\"`]({key})['\"`]"
   ]
 }

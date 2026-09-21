@@ -1,6 +1,6 @@
 # Machine Translation
 
-i18n Ally Next supports multiple translation engines to automatically translate missing keys.
+i18n Ally Community supports multiple translation engines to automatically translate missing keys.
 
 ## Supported Engines
 
@@ -22,7 +22,7 @@ i18n Ally Next supports multiple translation engines to automatically translate 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.translate.engines": ["google"]
+  "i18n-ally-community.translate.engines": ["google"]
 }
 ```
 
@@ -31,35 +31,35 @@ i18n Ally Next supports multiple translation engines to automatically translate 
 ```jsonc
 {
   // Google (optional, for higher rate limits)
-  "i18n-ally-next.translate.google.apiKey": "YOUR_KEY",
+  "i18n-ally-community.translate.google.apiKey": "YOUR_KEY",
 
   // DeepL
-  "i18n-ally-next.translate.deepl.apiKey": "YOUR_KEY",
-  "i18n-ally-next.translate.deepl.useFreeApiEntry": false,
+  "i18n-ally-community.translate.deepl.apiKey": "YOUR_KEY",
+  "i18n-ally-community.translate.deepl.useFreeApiEntry": false,
 
   // Baidu
-  "i18n-ally-next.translate.baidu.appid": "YOUR_APPID",
-  "i18n-ally-next.translate.baidu.apiSecret": "YOUR_SECRET",
+  "i18n-ally-community.translate.baidu.appid": "YOUR_APPID",
+  "i18n-ally-community.translate.baidu.apiSecret": "YOUR_SECRET",
 
   // LibreTranslate
-  "i18n-ally-next.translate.libre.apiRoot": "http://localhost:5000",
+  "i18n-ally-community.translate.libre.apiRoot": "http://localhost:5000",
 
   // OpenAI
-  "i18n-ally-next.translate.openai.apiKey": "YOUR_KEY",
-  "i18n-ally-next.translate.openai.apiRoot": "https://api.openai.com",
-  "i18n-ally-next.translate.openai.apiModel": "gpt-3.5-turbo",
+  "i18n-ally-community.translate.openai.apiKey": "YOUR_KEY",
+  "i18n-ally-community.translate.openai.apiRoot": "https://api.openai.com",
+  "i18n-ally-community.translate.openai.apiModel": "gpt-3.5-turbo",
 
   // Ollama (local LLM)
-  "i18n-ally-next.translate.ollama.apiRoot": "http://localhost:11434",
-  "i18n-ally-next.translate.ollama.model": "qwen2.5:latest",
+  "i18n-ally-community.translate.ollama.apiRoot": "http://localhost:11434",
+  "i18n-ally-community.translate.ollama.model": "qwen2.5:latest",
 
   // Editor LLM (VS Code + Copilot only)
-  "i18n-ally-next.translate.editor-llm.model": "" // leave empty to auto-select
+  "i18n-ally-community.translate.editor-llm.model": "" // leave empty to auto-select
 }
 ```
 
 ::: tip Editor LLM Quick Setup
-Run command **`i18n Ally Next: Select Editor LLM Model`** from the Command Palette (`Cmd+Shift+P`). It will list all available models, and automatically configure both the model and the engine for you.
+Run command **`i18n Ally Community: Select Editor LLM Model`** from the Command Palette (`Cmd+Shift+P`). It will list all available models, and automatically configure both the model and the engine for you.
 :::
 
 ::: warning
@@ -83,7 +83,7 @@ Store API keys in **User Settings** (not Workspace Settings) to avoid committing
 
 When you add a new language or need to catch up on translations, use the **Translate All Missing** command:
 
-1. Run `i18n Ally Next: Translate All Missing Keys` from the Command Palette
+1. Run `i18n Ally Community: Translate All Missing Keys` from the Command Palette
 2. Select one or more target languages (each shows its current translation progress percentage)
 3. The extension automatically collects all **missing keys**, **empty-value keys**, and **stale translations**
 4. All collected keys are sent to the translation engine in one batch
@@ -94,14 +94,14 @@ You can also trigger this from the sidebar — right-click a locale in the progr
 
 When using the DeepL engine, you can check your API usage at any time:
 
-- Run `i18n Ally Next: DeepL Usage` from the Command Palette
+- Run `i18n Ally Community: DeepL Usage` from the Command Palette
 - Shows your used character count and total quota
 
 ### Editor LLM Model Selection
 
 When using the Editor LLM engine, interactively select which model to use:
 
-- Run `i18n Ally Next: Select Editor LLM Model` from the Command Palette
+- Run `i18n Ally Community: Select Editor LLM Model` from the Command Palette
 - Lists all available models with name, ID, vendor, and family
 - After selection, the model is automatically written to your config
 
@@ -110,25 +110,25 @@ When using the Editor LLM engine, interactively select which model to use:
 ```jsonc
 {
   // Number of parallel translation requests
-  "i18n-ally-next.translate.parallels": 5,
+  "i18n-ally-community.translate.parallels": 5,
 
   // Prompt before translating source language
-  "i18n-ally-next.translate.promptSource": false,
+  "i18n-ally-community.translate.promptSource": false,
 
   // Override existing translations
-  "i18n-ally-next.translate.overrideExisting": false,
+  "i18n-ally-community.translate.overrideExisting": false,
 
   // Save translations as review candidates instead of applying directly
-  "i18n-ally-next.translate.saveAsCandidates": false,
+  "i18n-ally-community.translate.saveAsCandidates": false,
 
   // Use key as fallback when source text is empty
-  "i18n-ally-next.translate.fallbackToKey": false
+  "i18n-ally-community.translate.fallbackToKey": false
 }
 ```
 
 ## Stale Translation Detection
 
-When the source language text changes, existing translations in other languages may become outdated. i18n Ally Next can detect these stale translations.
+When the source language text changes, existing translations in other languages may become outdated. i18n Ally Community can detect these stale translations.
 
 ### How It Works
 
@@ -138,7 +138,7 @@ When the source language text changes, existing translations in other languages 
 
 ### Running the Check
 
-Run `i18n Ally Next: Check Stale Translations` from the Command Palette.
+Run `i18n Ally Community: Check Stale Translations` from the Command Palette.
 
 If stale translations are found, you'll be prompted with three options:
 

@@ -1,14 +1,14 @@
 # Review System
 
-i18n Ally Next includes a built-in review and collaboration system for translations, powered by VS Code's native comment API.
+i18n Ally Community includes a built-in review and collaboration system for translations, powered by VS Code's native comment API.
 
 ## Enable / Disable
 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.review.enabled": true,
-  "i18n-ally-next.review.gutters": true
+  "i18n-ally-community.review.enabled": true,
+  "i18n-ally-community.review.gutters": true
 }
 ```
 
@@ -28,7 +28,7 @@ i18n Ally Next includes a built-in review and collaboration system for translati
 
 ## Review Data
 
-Review data is stored in `.vscode/i18n-ally-next-reviews.yml` in your project. This file can be committed to version control for team collaboration.
+Review data is stored in `.vscode/i18n-ally-community-reviews.yml` in your project. This file can be committed to version control for team collaboration.
 
 ## User Identity
 
@@ -36,8 +36,8 @@ The reviewer name and email are auto-detected from your Git config. You can over
 
 ```jsonc
 {
-  "i18n-ally-next.review.user.name": "Your Name",
-  "i18n-ally-next.review.user.email": "you@example.com"
+  "i18n-ally-community.review.user.name": "Your Name",
+  "i18n-ally-community.review.user.email": "you@example.com"
 }
 ```
 
@@ -47,6 +47,6 @@ When `translate.saveAsCandidates` is enabled, machine translations are saved as 
 
 ```jsonc
 {
-  "i18n-ally-next.translate.saveAsCandidates": true
+  "i18n-ally-community.translate.saveAsCandidates": true
 }
 ```

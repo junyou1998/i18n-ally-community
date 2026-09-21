@@ -10,7 +10,7 @@
 
 ## 搜尋翻譯文字
 
-1. 在命令選擇區執行 `i18n Ally Next: Search translation by value`，或點選工具列的地球＋放大鏡圖示。
+1. 在命令選擇區執行 `i18n Ally Community: Search translation by value`，或點選工具列的地球＋放大鏡圖示。
 2. 輸入完整文字或其中一部分，例如「儲存」。搜尋會檢查目前載入的各語系翻譯，不區分英文大小寫，並忽略輸入前後的空白。
 3. 結果會列出 key、符合的語系與文字，以及引用檔案和行號。同一個 key 若有多個引用位置，會列出多筆結果。
 4. 用方向鍵切換結果以預覽位置，按 Enter 確認導覽；按 Escape 取消，回到搜尋前的編輯位置。
@@ -19,7 +19,7 @@
 
 ## 搜尋目前檔案
 
-在命令選擇區執行 `i18n Ally Next: Find translation value in file`。此命令只列出目前檔案中的 key，並以它們對應的翻譯文字進行篩選。
+在命令選擇區執行 `i18n Ally Community: Find translation value in file`。此命令只列出目前檔案中的 key，並以它們對應的翻譯文字進行篩選。
 
 輸入文字後，相符位置會以底色標示；方向鍵可預覽，Enter 可跳到選取位置，Escape 會取消搜尋並還原原本的選取範圍。編輯內容或移動選取位置時，搜尋標示會清除。
 
@@ -28,7 +28,7 @@
 | 搜尋目前檔案 | `Alt+F` | `Cmd+Alt+F` |
 | 搜尋翻譯文字 | `Alt+Shift+F` | `Cmd+Alt+Shift+F` |
 
-若快捷鍵與其他功能衝突，可在 VS Code「鍵盤快速鍵」中搜尋命令名稱並重新設定。命令識別碼分別為 `i18n-ally-next.find-in-file-by-value` 與 `i18n-ally-next.search-by-value`。
+若快捷鍵與其他功能衝突，可在 VS Code「鍵盤快速鍵」中搜尋命令名稱並重新設定。命令識別碼分別為 `i18n-ally-community.find-in-file-by-value` 與 `i18n-ally-community.search-by-value`。
 
 ## 從語系檔查看引用
 
@@ -38,7 +38,7 @@ CodeLens 預設開啟，可以在工作區設定中停用：
 
 ```json
 {
-  "i18n-ally-next.codeLens": false
+  "i18n-ally-community.codeLens": false
 }
 ```
 
