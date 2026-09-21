@@ -74,7 +74,7 @@ pnpm test:update
 pnpm vsce:pack
 
 # 安装到当前 IDE
-code --install-extension ./i18n-ally-next-*.vsix --force
+code --install-extension ./i18n-ally-community-*.vsix --force
 ```
 
 ### 4. 提交 Pull Request (PR)

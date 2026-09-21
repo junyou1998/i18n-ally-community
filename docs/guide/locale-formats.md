@@ -1,6 +1,6 @@
 # Locale Formats
 
-i18n Ally Next supports multiple locale file formats through its parser system.
+i18n Ally Community supports multiple locale file formats through its parser system.
 
 ## Supported Formats
 
@@ -23,7 +23,7 @@ By default, the extension enables parsers based on the detected framework. You c
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.enabledParsers": ["json", "yaml"]
+  "i18n-ally-community.enabledParsers": ["json", "yaml"]
 }
 ```
 
@@ -33,7 +33,7 @@ Map custom file extensions to existing parsers:
 
 ```jsonc
 {
-  "i18n-ally-next.parsers.extendFileExtensions": {
+  "i18n-ally-community.parsers.extendFileExtensions": {
     "lang": "json"
   }
 }
@@ -46,18 +46,18 @@ This maps `.lang` files to the JSON parser.
 ```jsonc
 {
   // Indentation size for writing locale files
-  "i18n-ally-next.indent": 2,
+  "i18n-ally-community.indent": 2,
 
   // Tab style: "space" or "tab"
-  "i18n-ally-next.tabStyle": "space",
+  "i18n-ally-community.tabStyle": "space",
 
   // File encoding
-  "i18n-ally-next.encoding": "utf-8",
+  "i18n-ally-community.encoding": "utf-8",
 
   // Sort keys when writing
-  "i18n-ally-next.sortKeys": true,
+  "i18n-ally-community.sortKeys": true,
 
   // Sort comparison method: "binary" or "locale"
-  "i18n-ally-next.sortCompare": "binary"
+  "i18n-ally-community.sortCompare": "binary"
 }
 ```

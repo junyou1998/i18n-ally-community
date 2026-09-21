@@ -10,8 +10,8 @@ import { expect } from 'chai'
 
 /** 需要迁移的文件映射 */
 const FILE_MIGRATIONS: Record<string, string> = {
-  '.vscode/i18n-ally-custom-framework.yml': '.vscode/i18n-ally-next-custom-framework.yml',
-  '.vscode/i18n-ally-reviews.yml': '.vscode/i18n-ally-next-reviews.yml',
+  '.vscode/i18n-ally-custom-framework.yml': '.vscode/i18n-ally-community-custom-framework.yml',
+  '.vscode/i18n-ally-reviews.yml': '.vscode/i18n-ally-community-reviews.yml',
 }
 
 interface FileMigrationResult {
@@ -153,7 +153,7 @@ describe('commands', () => {
 
       it('should migrate custom framework file', () => {
         const oldPath = path.join(tempDir, '.vscode/i18n-ally-custom-framework.yml')
-        const newPath = path.join(tempDir, '.vscode/i18n-ally-next-custom-framework.yml')
+        const newPath = path.join(tempDir, '.vscode/i18n-ally-community-custom-framework.yml')
         fs.writeFileSync(oldPath, 'languageIds: typescript')
         const result = migrateFilesCore(tempDir, FILE_MIGRATIONS)
         expect(result.migrated).to.have.length(1)
@@ -165,7 +165,7 @@ describe('commands', () => {
 
       it('should migrate reviews file', () => {
         const oldPath = path.join(tempDir, '.vscode/i18n-ally-reviews.yml')
-        const newPath = path.join(tempDir, '.vscode/i18n-ally-next-reviews.yml')
+        const newPath = path.join(tempDir, '.vscode/i18n-ally-community-reviews.yml')
         fs.writeFileSync(oldPath, 'reviews: {}')
         const result = migrateFilesCore(tempDir, FILE_MIGRATIONS)
         expect(result.migrated).to.have.length(1)
@@ -193,7 +193,7 @@ describe('commands', () => {
           'old content',
         )
         fs.writeFileSync(
-          path.join(tempDir, '.vscode/i18n-ally-next-custom-framework.yml'),
+          path.join(tempDir, '.vscode/i18n-ally-community-custom-framework.yml'),
           'new content',
         )
         const result = migrateFilesCore(tempDir, FILE_MIGRATIONS)
@@ -214,7 +214,7 @@ usageMatchRegex:
           content,
         )
         migrateFilesCore(tempDir, FILE_MIGRATIONS)
-        const newPath = path.join(tempDir, '.vscode/i18n-ally-next-custom-framework.yml')
+        const newPath = path.join(tempDir, '.vscode/i18n-ally-community-custom-framework.yml')
         expect(fs.readFileSync(newPath, 'utf-8')).to.equal(content)
       })
     })

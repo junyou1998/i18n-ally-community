@@ -4,7 +4,7 @@
 
 ## 适用场景
 
-i18n Ally Next 内置支持了许多主流框架（Vue I18n、react-i18next、next-intl、Angular 等）。如果你使用的是内置框架，则**不需要**自定义框架。
+i18n Ally Community 内置支持了许多主流框架（Vue I18n、react-i18next、next-intl、Angular 等）。如果你使用的是内置框架，则**不需要**自定义框架。
 
 以下场景适合使用自定义框架：
 
@@ -20,7 +20,7 @@ i18n Ally Next 内置支持了许多主流框架（Vue I18n、react-i18next、ne
 
 ## 配置文件
 
-在项目根目录创建 `.vscode/i18n-ally-next-custom-framework.yml`：
+在项目根目录创建 `.vscode/i18n-ally-community-custom-framework.yml`：
 
 ```yaml
 # 启用注解的语言 ID
@@ -99,7 +99,7 @@ languageIds:
 - **类型**：`string | string[]`
 - **必填**：是
 
-检测代码中 i18n 键的正则表达式。使用 `{key}` 作为占位符，运行时会被替换为实际的键匹配模式（可通过 `i18n-ally-next.regex.key` 配置）。
+检测代码中 i18n 键的正则表达式。使用 `{key}` 作为占位符，运行时会被替换为实际的键匹配模式（可通过 `i18n-ally-community.regex.key` 配置）。
 
 正则表达式**必须**包含一个捕获组 `({key})` 来提取键值。
 
@@ -259,7 +259,7 @@ locales/
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json"
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json"
 }
 ```
 
@@ -399,7 +399,7 @@ monopoly: false
 ```jsonc
 // .vscode/settings.json — 同时启用两者
 {
-  "i18n-ally-next.enabledFrameworks": ["vue", "custom"]
+  "i18n-ally-community.enabledFrameworks": ["vue", "custom"]
 }
 ```
 
@@ -426,8 +426,8 @@ refactorTemplates:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en"
 }
 ```
 
@@ -456,9 +456,9 @@ refactorTemplates:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json"
 }
 ```
 
@@ -530,7 +530,7 @@ refactorTemplates:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.enabledFrameworks": ["custom"]
+  "i18n-ally-community.enabledFrameworks": ["custom"]
 }
 ```
 
@@ -539,7 +539,7 @@ refactorTemplates:
 
 ```jsonc
 {
-  "i18n-ally-next.enabledFrameworks": ["vue", "custom"]
+  "i18n-ally-community.enabledFrameworks": ["vue", "custom"]
 }
 ```
 
@@ -552,13 +552,13 @@ refactorTemplates:
 
 | 设置项 | 说明 |
 | --- | --- |
-| `i18n-ally-next.localesPaths` | locale 文件路径 |
-| `i18n-ally-next.sourceLanguage` | 源语言代码（如 `en`） |
-| `i18n-ally-next.pathMatcher` | locale 文件路径模式（如 `{locale}/{namespace}.json`） |
-| `i18n-ally-next.keystyle` | 键风格：`nested`、`flat` 或 `auto` |
-| `i18n-ally-next.dirStructure` | 目录结构：`file` 或 `dir` |
-| `i18n-ally-next.defaultNamespace` | 未指定命名空间时的默认命名空间 |
-| `i18n-ally-next.namespace` | 全局启用命名空间（替代在 YAML 中设置） |
+| `i18n-ally-community.localesPaths` | locale 文件路径 |
+| `i18n-ally-community.sourceLanguage` | 源语言代码（如 `en`） |
+| `i18n-ally-community.pathMatcher` | locale 文件路径模式（如 `{locale}/{namespace}.json`） |
+| `i18n-ally-community.keystyle` | 键风格：`nested`、`flat` 或 `auto` |
+| `i18n-ally-community.dirStructure` | 目录结构：`file` 或 `dir` |
+| `i18n-ally-community.defaultNamespace` | 未指定命名空间时的默认命名空间 |
+| `i18n-ally-community.namespace` | 全局启用命名空间（替代在 YAML 中设置） |
 
 ## 热重载
 

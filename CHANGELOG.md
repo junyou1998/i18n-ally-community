@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.0 (2026-09-21)
+
+This is the first independent community release under the `junyou1998.i18n-ally-community` extension ID.
+
+### ⚡ Features
+
+* Add reverse lookup from translated values to translation keys and source references.
+
 ### [3.0.15](https://github.com/lydanne/i18n-ally-next/compare/v3.0.14...v3.0.15) (2026-03-19)
 
 

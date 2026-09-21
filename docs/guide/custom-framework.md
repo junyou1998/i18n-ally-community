@@ -4,7 +4,7 @@ If your i18n solution is not natively supported, you can define a custom framewo
 
 ## When to Use
 
-i18n Ally Next has built-in support for many popular frameworks (Vue I18n, react-i18next, next-intl, Angular, etc.). You **don't need** a custom framework if you're using one of them.
+i18n Ally Community has built-in support for many popular frameworks (Vue I18n, react-i18next, next-intl, Angular, etc.). You **don't need** a custom framework if you're using one of them.
 
 Use a custom framework when:
 
@@ -20,7 +20,7 @@ You can check the [Supported Frameworks](/guide/supported-frameworks) page to se
 
 ## Configuration File
 
-Create `.vscode/i18n-ally-next-custom-framework.yml` in your project root:
+Create `.vscode/i18n-ally-community-custom-framework.yml` in your project root:
 
 ```yaml
 # Language IDs to enable annotations
@@ -99,7 +99,7 @@ Supported values: `javascript`, `typescript`, `javascriptreact`, `typescriptreac
 - **Type**: `string | string[]`
 - **Required**: Yes
 
-Regex patterns to detect i18n keys in code. Use `{key}` as placeholder, which will be replaced by the actual key matching pattern (configurable via `i18n-ally-next.regex.key`).
+Regex patterns to detect i18n keys in code. Use `{key}` as placeholder, which will be replaced by the actual key matching pattern (configurable via `i18n-ally-community.regex.key`).
 
 The regex **must** contain a capture group `({key})` to extract the key value.
 
@@ -259,7 +259,7 @@ When using namespaces, make sure to configure `pathMatcher` in your VS Code sett
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json"
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json"
 }
 ```
 
@@ -399,7 +399,7 @@ monopoly: false
 ```jsonc
 // .vscode/settings.json — enable both
 {
-  "i18n-ally-next.enabledFrameworks": ["vue", "custom"]
+  "i18n-ally-community.enabledFrameworks": ["vue", "custom"]
 }
 ```
 
@@ -426,8 +426,8 @@ refactorTemplates:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en"
 }
 ```
 
@@ -456,9 +456,9 @@ refactorTemplates:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json"
 }
 ```
 
@@ -530,7 +530,7 @@ You can either:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.enabledFrameworks": ["custom"]
+  "i18n-ally-community.enabledFrameworks": ["custom"]
 }
 ```
 
@@ -539,7 +539,7 @@ Custom framework can coexist with built-in frameworks. For example, you can use 
 
 ```jsonc
 {
-  "i18n-ally-next.enabledFrameworks": ["vue", "custom"]
+  "i18n-ally-community.enabledFrameworks": ["vue", "custom"]
 }
 ```
 
@@ -552,13 +552,13 @@ These VS Code settings are commonly used together with custom frameworks:
 
 | Setting | Description |
 | --- | --- |
-| `i18n-ally-next.localesPaths` | Paths to locale files |
-| `i18n-ally-next.sourceLanguage` | Source language code (e.g. `en`) |
-| `i18n-ally-next.pathMatcher` | Locale file path pattern (e.g. `{locale}/{namespace}.json`) |
-| `i18n-ally-next.keystyle` | Key style: `nested`, `flat`, or `auto` |
-| `i18n-ally-next.dirStructure` | Directory structure: `file` or `dir` |
-| `i18n-ally-next.defaultNamespace` | Default namespace when no explicit namespace is specified |
-| `i18n-ally-next.namespace` | Enable namespace globally (alternative to setting it in YAML) |
+| `i18n-ally-community.localesPaths` | Paths to locale files |
+| `i18n-ally-community.sourceLanguage` | Source language code (e.g. `en`) |
+| `i18n-ally-community.pathMatcher` | Locale file path pattern (e.g. `{locale}/{namespace}.json`) |
+| `i18n-ally-community.keystyle` | Key style: `nested`, `flat`, or `auto` |
+| `i18n-ally-community.dirStructure` | Directory structure: `file` or `dir` |
+| `i18n-ally-community.defaultNamespace` | Default namespace when no explicit namespace is specified |
+| `i18n-ally-community.namespace` | Enable namespace globally (alternative to setting it in YAML) |
 
 ## Hot Reload
 

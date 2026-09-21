@@ -7,9 +7,9 @@
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/assets/i18n"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested"
+  "i18n-ally-community.localesPaths": ["src/assets/i18n"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested"
 }
 ```
 

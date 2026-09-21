@@ -1,6 +1,6 @@
 # 机器翻译
 
-i18n Ally Next 支持多种翻译引擎，自动翻译缺失的键。
+i18n Ally Community 支持多种翻译引擎，自动翻译缺失的键。
 
 ## 支持的引擎
 
@@ -22,7 +22,7 @@ i18n Ally Next 支持多种翻译引擎，自动翻译缺失的键。
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.translate.engines": ["google"]
+  "i18n-ally-community.translate.engines": ["google"]
 }
 ```
 
@@ -31,35 +31,35 @@ i18n Ally Next 支持多种翻译引擎，自动翻译缺失的键。
 ```jsonc
 {
   // Google（可选，用于提高请求限额）
-  "i18n-ally-next.translate.google.apiKey": "YOUR_KEY",
+  "i18n-ally-community.translate.google.apiKey": "YOUR_KEY",
 
   // DeepL
-  "i18n-ally-next.translate.deepl.apiKey": "YOUR_KEY",
-  "i18n-ally-next.translate.deepl.useFreeApiEntry": false,
+  "i18n-ally-community.translate.deepl.apiKey": "YOUR_KEY",
+  "i18n-ally-community.translate.deepl.useFreeApiEntry": false,
 
   // 百度翻译
-  "i18n-ally-next.translate.baidu.appid": "YOUR_APPID",
-  "i18n-ally-next.translate.baidu.apiSecret": "YOUR_SECRET",
+  "i18n-ally-community.translate.baidu.appid": "YOUR_APPID",
+  "i18n-ally-community.translate.baidu.apiSecret": "YOUR_SECRET",
 
   // LibreTranslate
-  "i18n-ally-next.translate.libre.apiRoot": "http://localhost:5000",
+  "i18n-ally-community.translate.libre.apiRoot": "http://localhost:5000",
 
   // OpenAI
-  "i18n-ally-next.translate.openai.apiKey": "YOUR_KEY",
-  "i18n-ally-next.translate.openai.apiRoot": "https://api.openai.com",
-  "i18n-ally-next.translate.openai.apiModel": "gpt-3.5-turbo",
+  "i18n-ally-community.translate.openai.apiKey": "YOUR_KEY",
+  "i18n-ally-community.translate.openai.apiRoot": "https://api.openai.com",
+  "i18n-ally-community.translate.openai.apiModel": "gpt-3.5-turbo",
 
   // Ollama（本地大模型）
-  "i18n-ally-next.translate.ollama.apiRoot": "http://localhost:11434",
-  "i18n-ally-next.translate.ollama.model": "qwen2.5:latest",
+  "i18n-ally-community.translate.ollama.apiRoot": "http://localhost:11434",
+  "i18n-ally-community.translate.ollama.model": "qwen2.5:latest",
 
   // 编辑器内置 LLM（仅 VS Code + Copilot）
-  "i18n-ally-next.translate.editor-llm.model": "" // 留空则自动选择
+  "i18n-ally-community.translate.editor-llm.model": "" // 留空则自动选择
 }
 ```
 
 ::: tip 编辑器 LLM 快速配置
-运行命令 **`i18n Ally Next: Select Editor LLM Model`**（`Cmd+Shift+P`），会列出所有可用模型供你选择，并自动配置模型和翻译引擎。
+运行命令 **`i18n Ally Community: Select Editor LLM Model`**（`Cmd+Shift+P`），会列出所有可用模型供你选择，并自动配置模型和翻译引擎。
 :::
 
 ::: warning
@@ -83,7 +83,7 @@ i18n Ally Next 支持多种翻译引擎，自动翻译缺失的键。
 
 当你新增了一种语言或需要补全翻译时，使用 **翻译所有缺失** 命令：
 
-1. 运行命令面板中的 `i18n Ally Next: Translate All Missing Keys`
+1. 运行命令面板中的 `i18n Ally Community: Translate All Missing Keys`
 2. 选择一个或多个目标语言（每个语言显示当前翻译进度百分比）
 3. 插件自动收集所有**缺失键**、**空值键**和**过期翻译**
 4. 一键发送到翻译引擎批量完成
@@ -94,14 +94,14 @@ i18n Ally Next 支持多种翻译引擎，自动翻译缺失的键。
 
 使用 DeepL 引擎时，可以随时查看 API 用量：
 
-- 运行命令面板中的 `i18n Ally Next: DeepL Usage`
+- 运行命令面板中的 `i18n Ally Community: DeepL Usage`
 - 显示已用字符数和总配额
 
 ### 编辑器 LLM 模型选择
 
 使用 Editor LLM 引擎时，可以交互式选择模型：
 
-- 运行命令面板中的 `i18n Ally Next: Select Editor LLM Model`
+- 运行命令面板中的 `i18n Ally Community: Select Editor LLM Model`
 - 列出所有可用模型（名称、ID、vendor、family）
 - 选择后自动写入配置
 
@@ -110,25 +110,25 @@ i18n Ally Next 支持多种翻译引擎，自动翻译缺失的键。
 ```jsonc
 {
   // 并行翻译请求数
-  "i18n-ally-next.translate.parallels": 5,
+  "i18n-ally-community.translate.parallels": 5,
 
   // 翻译源语言前提示确认
-  "i18n-ally-next.translate.promptSource": false,
+  "i18n-ally-community.translate.promptSource": false,
 
   // 覆盖已有翻译
-  "i18n-ally-next.translate.overrideExisting": false,
+  "i18n-ally-community.translate.overrideExisting": false,
 
   // 将翻译保存为审阅候选而非直接应用
-  "i18n-ally-next.translate.saveAsCandidates": false,
+  "i18n-ally-community.translate.saveAsCandidates": false,
 
   // 源文本为空时使用键名作为回退
-  "i18n-ally-next.translate.fallbackToKey": false
+  "i18n-ally-community.translate.fallbackToKey": false
 }
 ```
 
 ## 陈旧翻译检测
 
-当源语言文案发生变更时，其他语言的翻译可能已经过时。i18n Ally Next 可以检测这些陈旧翻译。
+当源语言文案发生变更时，其他语言的翻译可能已经过时。i18n Ally Community 可以检测这些陈旧翻译。
 
 ### 工作原理
 
@@ -138,7 +138,7 @@ i18n Ally Next 支持多种翻译引擎，自动翻译缺失的键。
 
 ### 运行检测
 
-运行命令面板中的 `i18n Ally Next: Check Stale Translations`。
+运行命令面板中的 `i18n Ally Community: Check Stale Translations`。
 
 如果发现陈旧翻译，会提示三个选项：
 

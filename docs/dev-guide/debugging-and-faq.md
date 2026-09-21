@@ -8,7 +8,7 @@ Press `F5` in VS Code to launch the Extension Development Host. Set breakpoints,
 
 ### Output Channel
 
-The plugin outputs logs in VS Code's Output panel under the `i18n Ally Next` channel.
+The plugin outputs logs in VS Code's Output panel under the `i18n Ally Community` channel.
 
 ```typescript
 import { Log } from '~/utils'
@@ -21,7 +21,7 @@ Log.warn('Node not found:', keypath)
 
 ```bash
 pnpm vsce:pack
-code --install-extension ./i18n-ally-next-*.vsix --force
+code --install-extension ./i18n-ally-community-*.vsix --force
 ```
 
 ## FAQ

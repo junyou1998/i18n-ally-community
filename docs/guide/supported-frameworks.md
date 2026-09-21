@@ -1,6 +1,6 @@
 # Supported Frameworks
 
-i18n Ally Next supports a wide range of i18n frameworks out of the box. It auto-detects the framework by reading your project's dependency files.
+i18n Ally Community supports a wide range of i18n frameworks out of the box. It auto-detects the framework by reading your project's dependency files.
 
 ## Web Frameworks
 
@@ -47,17 +47,17 @@ i18n Ally Next supports a wide range of i18n frameworks out of the box. It auto-
 | **UI5** | `@openui5/sap.ui.core` | js, ts, xml |
 | **Jekyll** | `jekyll-multiple-languages-plugin` | html, md |
 | **Fluent Vue** | `fluent-vue` | vue, js, ts |
-| **General** | `i18n-ally-next` | js, ts, jsx, tsx |
+| **General** | `i18n-ally-community` | js, ts, jsx, tsx |
 
 ## Custom Framework
 
-If your framework is not listed above, you can define a [Custom Framework](/guide/custom-framework) to make i18n Ally Next work with any i18n solution.
+If your framework is not listed above, you can define a [Custom Framework](/guide/custom-framework) to make i18n Ally Community work with any i18n solution.
 
 ## Manual Framework Selection
 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.enabledFrameworks": ["react-i18next", "custom"]
+  "i18n-ally-community.enabledFrameworks": ["react-i18next", "custom"]
 }
 ```

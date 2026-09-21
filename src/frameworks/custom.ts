@@ -11,7 +11,7 @@ import { File, Log } from '~/utils'
 import { Framework } from './base'
 
 const CustomFrameworkConfigFilenames = [
-  './.vscode/i18n-ally-next-custom-framework.yml',
+  './.vscode/i18n-ally-community-custom-framework.yml',
   './.vscode/i18n-ally-custom-framework.yml',
 ]
 

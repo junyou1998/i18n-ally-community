@@ -21,7 +21,7 @@ export class LocaleCodeLensProvider implements CodeLensProvider, VSCodeDisposabl
           this.fireLoaderChange()
       }),
       workspace.onDidChangeConfiguration((event) => {
-        if (event.affectsConfiguration('i18n-ally-next.codeLens'))
+        if (event.affectsConfiguration('i18n-ally-community.codeLens'))
           this._onDidChangeCodeLenses.fire()
       }),
     )

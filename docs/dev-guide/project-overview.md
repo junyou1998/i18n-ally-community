@@ -2,7 +2,7 @@
 
 ## Introduction
 
-i18n Ally Next is a VS Code extension for internationalization (i18n) workflow assistance. It supports multiple i18n frameworks (e.g., i18next, vue-i18n, react-intl, etc.), providing inline translation display, go-to-definition, auto-completion, hard-coded string extraction, translation management, and more.
+i18n Ally Community is a VS Code extension for internationalization (i18n) workflow assistance. It supports multiple i18n frameworks (e.g., i18next, vue-i18n, react-intl, etc.), providing inline translation display, go-to-definition, auto-completion, hard-coded string extraction, translation management, and more.
 
 ## Tech Stack
 
@@ -15,7 +15,7 @@ i18n Ally Next is a VS Code extension for internationalization (i18n) workflow a
 ## Directory Structure
 
 ```text
-i18n-ally-next/
+i18n-ally-community/
 ├── src/                        # Source code
 │   ├── extension.ts            # Plugin entry, registers all modules
 │   ├── core/                   # Core modules

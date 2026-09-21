@@ -1,10 +1,10 @@
-# 🚀 i18n Ally Next — A Maintained Fork with New Features & Full Documentation
+# 🚀 i18n Ally Community — A Maintained Fork with New Features & Full Documentation
 
 Hi everyone 👋
 
 As a long-time user of i18n Ally, I've benefited greatly from this amazing extension. However, since the original project has slowed down in maintenance, many community issues and PRs remain unresolved, and support for newer frameworks is lagging behind.
 
-That's why I created **[i18n Ally Next](https://github.com/lydanne/i18n-ally-next)** — a maintained fork that preserves all the classic features you love, while adding new capabilities and **a complete documentation site**.
+That's why I created **[i18n Ally Community](https://github.com/junyou1998/i18n-ally-community)** — a maintained fork that preserves all the classic features you love, while adding new capabilities and **a complete documentation site**.
 
 ## What's New?
 
@@ -35,27 +35,27 @@ That's why I created **[i18n Ally Next](https://github.com/lydanne/i18n-ally-nex
 - Duplicate keys, fulfill missing keys, mark keys as in-use.
 
 ### 📖 Complete Documentation
-- **Full documentation site**: [https://lydanne.github.io/i18n-ally-next/](https://lydanne.github.io/i18n-ally-next/)
+- **Full documentation site**: [https://junyou1998.github.io/i18n-ally-community/](https://junyou1998.github.io/i18n-ally-community/)
 - Guides for every feature, framework-specific best practices, configuration reference.
 - Available in **English** and **中文**.
 
 ## Installation
 
-Search **i18n Ally Next** in the VS Code Extensions panel, or install from:
+Search **i18n Ally Community** in the VS Code Extensions panel, or install from:
 
-- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next)
-- [Open VSX Registry](https://open-vsx.org/extension/lydanne/i18n-ally-next)
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community)
+- [Open VSX Registry](https://open-vsx.org/extension/junyou1998/i18n-ally-community)
 
 ## Migration from i18n Ally
 
-i18n Ally Next is **fully backward compatible**. Your existing `.vscode/settings.json` configuration works as-is — just change the setting prefix from `i18n-ally.` to `i18n-ally-next.`.
+i18n Ally Community is **fully backward compatible**. Your existing `.vscode/settings.json` configuration works as-is — just change the setting prefix from `i18n-ally.` to `i18n-ally-community.`.
 
 ## Links
 
-- 📦 [GitHub](https://github.com/lydanne/i18n-ally-next)
-- 📖 [Documentation](https://lydanne.github.io/i18n-ally-next/)
-- 🛒 [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next)
+- 📦 [GitHub](https://github.com/junyou1998/i18n-ally-community)
+- 📖 [Documentation](https://junyou1998.github.io/i18n-ally-community/)
+- 🛒 [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community)
 
 ---
 
-If you've been waiting for fixes or new features in i18n Ally, give i18n Ally Next a try! Feedback, issues, and PRs are all welcome. ⭐
+If you've been waiting for fixes or new features in i18n Ally, give i18n Ally Community a try! Feedback, issues, and PRs are all welcome. ⭐

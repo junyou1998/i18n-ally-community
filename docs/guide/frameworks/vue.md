@@ -5,10 +5,10 @@
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested",
-  "i18n-ally-next.dirStructure": "file"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested",
+  "i18n-ally-community.dirStructure": "file"
 }
 ```
 
@@ -26,7 +26,7 @@ src/
 
 ## Usage Patterns
 
-i18n Ally Next recognizes the following Vue I18n patterns:
+i18n Ally Community recognizes the following Vue I18n patterns:
 
 ```vue
 <template>
@@ -68,6 +68,6 @@ Enable SFC support by including `vue-sfc` in your frameworks if auto-detection d
 
 ```jsonc
 {
-  "i18n-ally-next.enabledFrameworks": ["vue", "vue-sfc"]
+  "i18n-ally-community.enabledFrameworks": ["vue", "vue-sfc"]
 }
 ```

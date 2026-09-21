@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: i18n Ally Next
+  name: i18n Ally Community
   text: All in one i18n extension for VS Code
   tagline: Inline annotations, automated translations, extract refactoring, and more.
   image:
     src: /logo.png
-    alt: i18n Ally Next
+    alt: i18n Ally Community
   actions:
     - theme: brand
       text: Get Started
@@ -17,7 +17,7 @@ hero:
       link: /config/
     - theme: alt
       text: GitHub
-      link: https://github.com/lydanne/i18n-ally-next
+      link: https://github.com/junyou1998/i18n-ally-community
 
 features:
   - title: 🌍 Inline Annotations

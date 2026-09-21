@@ -74,7 +74,7 @@ pnpm test:update
 pnpm vsce:pack
 
 # Install to current IDE
-code --install-extension ./i18n-ally-next-*.vsix --force
+code --install-extension ./i18n-ally-community-*.vsix --force
 ```
 
 ### 4. Submitting a Pull Request

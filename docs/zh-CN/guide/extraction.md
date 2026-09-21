@@ -1,6 +1,6 @@
 # 文案提取
 
-i18n Ally Next 可以检测代码中的硬编码字符串，并帮助你将它们提取到语言文件中。
+i18n Ally Community 可以检测代码中的硬编码字符串，并帮助你将它们提取到语言文件中。
 
 ## 自动检测
 
@@ -9,7 +9,7 @@ i18n Ally Next 可以检测代码中的硬编码字符串，并帮助你将它�
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.extract.autoDetect": true
+  "i18n-ally-community.extract.autoDetect": true
 }
 ```
 
@@ -38,16 +38,16 @@ i18n Ally Next 可以检测代码中的硬编码字符串，并帮助你将它�
   // "empty" — 留空键名，手动输入
   // "source" — 使用源字符串作为键名
   // "template" — 通过模板字符串生成键名（见下方）
-  "i18n-ally-next.extract.keygenStrategy": "slug",
+  "i18n-ally-community.extract.keygenStrategy": "slug",
 
   // 键名风格: "default", "camelCase", "PascalCase", "snake_case", "kebab-case"
-  "i18n-ally-next.extract.keygenStyle": "default",
+  "i18n-ally-community.extract.keygenStyle": "default",
 
   // 键名最大长度
-  "i18n-ally-next.extract.keyMaxLength": 50,
+  "i18n-ally-community.extract.keyMaxLength": 50,
 
   // 键名前缀
-  "i18n-ally-next.extract.keyPrefix": ""
+  "i18n-ally-community.extract.keyPrefix": ""
 }
 ```
 
@@ -57,8 +57,8 @@ i18n Ally Next 可以检测代码中的硬编码字符串，并帮助你将它�
 
 ```jsonc
 {
-  "i18n-ally-next.extract.keygenStrategy": "template",
-  "i18n-ally-next.extract.keygenTemplate": "{{dirname}}:{{filename}}"
+  "i18n-ally-community.extract.keygenStrategy": "template",
+  "i18n-ally-community.extract.keygenTemplate": "{{dirname}}:{{filename}}"
 }
 ```
 
@@ -105,7 +105,7 @@ i18n Ally Next 可以检测代码中的硬编码字符串，并帮助你将它�
   // "most-similar-by-key" — 按键前缀匹配
   // "file-previous" — 记住每个文件的上次选择
   // "global-previous" — 全局记住上次选择
-  "i18n-ally-next.extract.targetPickingStrategy": "none"
+  "i18n-ally-community.extract.targetPickingStrategy": "none"
 }
 ```
 
@@ -115,11 +115,11 @@ i18n Ally Next 可以检测代码中的硬编码字符串，并帮助你将它�
 
 ```jsonc
 {
-  "i18n-ally-next.extract.ignored": [
+  "i18n-ally-community.extract.ignored": [
     "TODO",
     "FIXME"
   ],
-  "i18n-ally-next.extract.ignoredByFiles": {
+  "i18n-ally-community.extract.ignoredByFiles": {
     "src/constants.ts": ["SOME_CONSTANT"]
   }
 }
@@ -131,7 +131,7 @@ i18n Ally Next 可以检测代码中的硬编码字符串，并帮助你将它�
 
 ```jsonc
 {
-  "i18n-ally-next.refactor.templates": [
+  "i18n-ally-community.refactor.templates": [
     {
       "source": "js-string",
       "templates": ["t('{key}')"]
@@ -148,11 +148,11 @@ i18n Ally Next 可以检测代码中的硬编码字符串，并帮助你将它�
 
 ## 全项目扫描与提取
 
-除了单文件和批量提取，i18n Ally Next 还支持**扫描整个项目**的硬编码字符串并一次性全部提取。
+除了单文件和批量提取，i18n Ally Community 还支持**扫描整个项目**的硬编码字符串并一次性全部提取。
 
 ### 运行扫描
 
-运行命令面板中的 `i18n Ally Next: Scan and Extract All`。
+运行命令面板中的 `i18n Ally Community: Scan and Extract All`。
 
 处理流程：
 
@@ -169,12 +169,12 @@ i18n Ally Next 可以检测代码中的硬编码字符串，并帮助你将它�
 {
   // 扫描包含的文件 glob 模式
   // 如果为空，使用默认的支持语言 glob
-  "i18n-ally-next.extract.scanningInclude": [
+  "i18n-ally-community.extract.scanningInclude": [
     "src/**/*.{ts,tsx,vue,js,jsx}"
   ],
 
   // 扫描时忽略的文件 glob 模式
-  "i18n-ally-next.extract.scanningIgnore": [
+  "i18n-ally-community.extract.scanningIgnore": [
     "src/generated/**",
     "src/**/*.test.*",
     "src/**/*.spec.*"

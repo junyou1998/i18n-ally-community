@@ -26,34 +26,34 @@
   ],
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.formatOnSave": false,
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "flat",
-  "i18n-ally-next.preferredDelimiter": "_",
-  "i18n-ally-next.sortKeys": true,
-  "i18n-ally-next.sortCompare": "binary",
-  "i18n-ally-next.keepFulfilled": true,
-  "i18n-ally-next.translate.promptSource": true,
-  "i18n-ally-next.pathMatcher": "{locale}.json",
-  "i18n-ally-next.translate.engines": ["editor-llm"],
-  "i18n-ally-next.translate.editor-llm.model": "grok-code-fast-1",
-  "i18n-ally-next.translate.saveAsCandidates": true,
-  "i18n-ally-next.extract.targetPickingStrategy": "auto",
-  "i18n-ally-next.annotationInPlace": true,
-  "i18n-ally-next.annotationInPlaceFullMatch": true,
-  // "i18n-ally-next.theme.annotationInPlaceFullMatch": "#a31515",
-  "i18n-ally-next.keysInUse": [
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "flat",
+  "i18n-ally-community.preferredDelimiter": "_",
+  "i18n-ally-community.sortKeys": true,
+  "i18n-ally-community.sortCompare": "binary",
+  "i18n-ally-community.keepFulfilled": true,
+  "i18n-ally-community.translate.promptSource": true,
+  "i18n-ally-community.pathMatcher": "{locale}.json",
+  "i18n-ally-community.translate.engines": ["editor-llm"],
+  "i18n-ally-community.translate.editor-llm.model": "grok-code-fast-1",
+  "i18n-ally-community.translate.saveAsCandidates": true,
+  "i18n-ally-community.extract.targetPickingStrategy": "auto",
+  "i18n-ally-community.annotationInPlace": true,
+  "i18n-ally-community.annotationInPlaceFullMatch": true,
+  // "i18n-ally-community.theme.annotationInPlaceFullMatch": "#a31515",
+  "i18n-ally-community.keysInUse": [
     "view.progress_submenu.translated_keys",
     "view.progress_submenu.missing_keys",
     "view.progress_submenu.empty_keys"
   ],
-  "i18n-ally-next.usage.scanningIgnore": ["examples"],
-  "i18n-ally-next.regex.usageMatchAppend": [
+  "i18n-ally-community.usage.scanningIgnore": ["examples"],
+  "i18n-ally-community.regex.usageMatchAppend": [
     "/\\*\\s*i18n\\s*\\*/\\s*['\"`]({key})['\"`]"
   ],
-  "i18n-ally-next.enabledFrameworks": ["vscode", "vue", "general"],
-  "i18n-ally-next.annotationBrackets": ["`", "`"],
-  "i18n-ally-next.theme.annotationMissingBorder": "#d37070",
-  "i18n-ally-next.theme.annotationMissing": "#d37070",
+  "i18n-ally-community.enabledFrameworks": ["vscode", "vue", "general"],
+  "i18n-ally-community.annotationBrackets": ["`", "`"],
+  "i18n-ally-community.theme.annotationMissingBorder": "#d37070",
+  "i18n-ally-community.theme.annotationMissing": "#d37070",
   "eslint.validate": [
     "javascript",
     "typescript",
@@ -63,7 +63,7 @@
     "html"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
-  // "i18n-ally-next.localesPaths": [
+  // "i18n-ally-community.localesPaths": [
   //   "locales",
   //   "examples/by-features/collections/locales",
   //   "examples/by-features/100-locales/locales",
@@ -110,5 +110,5 @@
   //   "examples/by-frameworks/vuex-i18n/todo-demo/app/i18n",
   //   "examples/by-features/module-style/modules/moduleC/nested/locales"
   // ],
-  "i18n-ally-next.localesPaths": "./locales",
+  "i18n-ally-community.localesPaths": "./locales"
 }

@@ -7,9 +7,9 @@
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/lib/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested"
+  "i18n-ally-community.localesPaths": ["src/lib/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested"
 }
 ```
 
@@ -31,10 +31,10 @@
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["resources/lang"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested",
-  "i18n-ally-next.enabledParsers": ["php", "json"]
+  "i18n-ally-community.localesPaths": ["resources/lang"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested",
+  "i18n-ally-community.enabledParsers": ["php", "json"]
 }
 ```
 
@@ -72,10 +72,10 @@ trans_choice('messages.items', $count)
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["config/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested",
-  "i18n-ally-next.enabledParsers": ["yaml"]
+  "i18n-ally-community.localesPaths": ["config/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested",
+  "i18n-ally-community.enabledParsers": ["yaml"]
 }
 ```
 

@@ -7,7 +7,7 @@ import { Log } from '~/utils'
 import { Commands } from './commands'
 
 /** 新版配置命名空间 */
-const NEW_NAMESPACE = 'i18n-ally-next'
+const NEW_NAMESPACE = 'i18n-ally-community'
 
 /** 需要迁移的旧版配置命名空间列表（按优先级排序） */
 const LEGACY_NAMESPACES = [
@@ -17,8 +17,8 @@ const LEGACY_NAMESPACES = [
 
 /** 需要迁移的文件映射 */
 const FILE_MIGRATIONS: Record<string, string> = {
-  '.vscode/i18n-ally-custom-framework.yml': '.vscode/i18n-ally-next-custom-framework.yml',
-  '.vscode/i18n-ally-reviews.yml': '.vscode/i18n-ally-next-reviews.yml',
+  '.vscode/i18n-ally-custom-framework.yml': '.vscode/i18n-ally-community-custom-framework.yml',
+  '.vscode/i18n-ally-reviews.yml': '.vscode/i18n-ally-community-reviews.yml',
 }
 
 interface MigrationResult {

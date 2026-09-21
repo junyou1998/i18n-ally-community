@@ -28,7 +28,7 @@ Override the default pattern:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.{ext}"
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.{ext}"
 }
 ```
 
@@ -42,7 +42,7 @@ locales/zh-CN.json
 ```
 
 ```jsonc
-{ "i18n-ally-next.pathMatcher": "{locale}.{ext}" }
+{ "i18n-ally-community.pathMatcher": "{locale}.{ext}" }
 ```
 
 ### Nested by Locale
@@ -53,7 +53,7 @@ locales/en/review.json
 ```
 
 ```jsonc
-{ "i18n-ally-next.pathMatcher": "{locale}/{namespace}.{ext}" }
+{ "i18n-ally-community.pathMatcher": "{locale}/{namespace}.{ext}" }
 ```
 
 ### Nested by Namespace
@@ -64,7 +64,7 @@ locales/common/zh-CN.json
 ```
 
 ```jsonc
-{ "i18n-ally-next.pathMatcher": "{namespace}/{locale}.{ext}" }
+{ "i18n-ally-community.pathMatcher": "{namespace}/{locale}.{ext}" }
 ```
 
 ### Deep Nesting
@@ -75,5 +75,5 @@ src/modules/dashboard/i18n/en.json
 ```
 
 ```jsonc
-{ "i18n-ally-next.pathMatcher": "{namespace}/i18n/{locale}.{ext}" }
+{ "i18n-ally-community.pathMatcher": "{namespace}/i18n/{locale}.{ext}" }
 ```

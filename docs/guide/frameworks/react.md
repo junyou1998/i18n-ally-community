@@ -7,11 +7,11 @@
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["public/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested",
-  "i18n-ally-next.dirStructure": "dir",
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json"
+  "i18n-ally-community.localesPaths": ["public/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested",
+  "i18n-ally-community.dirStructure": "dir",
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json"
 }
 ```
 
@@ -61,7 +61,7 @@ function App() {
 
 ```jsonc
 {
-  "i18n-ally-next.defaultNamespace": "common"
+  "i18n-ally-community.defaultNamespace": "common"
 }
 ```
 
@@ -72,11 +72,11 @@ function App() {
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["messages"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested",
-  "i18n-ally-next.dirStructure": "file",
-  "i18n-ally-next.pathMatcher": "{locale}.json"
+  "i18n-ally-community.localesPaths": ["messages"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested",
+  "i18n-ally-community.dirStructure": "file",
+  "i18n-ally-community.pathMatcher": "{locale}.json"
 }
 ```
 
@@ -135,11 +135,11 @@ export default function HomePage() {
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["public/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested",
-  "i18n-ally-next.dirStructure": "dir",
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json"
+  "i18n-ally-community.localesPaths": ["public/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested",
+  "i18n-ally-community.dirStructure": "dir",
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json"
 }
 ```
 

@@ -10,7 +10,7 @@ web_modules
 res/editor/
 
 examples/**/package-lock.json
-examples/**/i18n-ally-next-reviews.yml
+examples/**/i18n-ally-community-reviews.yml
 package.nls.*
 stats.json
 

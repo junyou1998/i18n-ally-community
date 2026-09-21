@@ -2,25 +2,25 @@
 
 ## 安装
 
-在 VS Code 扩展面板中搜索 **i18n Ally Next**，或从以下渠道安装：
+在 VS Code 扩展面板中搜索 **i18n Ally Community**，或从以下渠道安装：
 
-- [VS Code 插件市场](https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next)
-- [Open VSX Registry](https://open-vsx.org/extension/lydanne/i18n-ally-next)
+- [VS Code 插件市场](https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community)
+- [Open VSX Registry](https://open-vsx.org/extension/junyou1998/i18n-ally-community)
 
-<p style="display:flex;gap:2px"><a href="https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next" target="_blank"><img src="https://img.shields.io/visual-studio-marketplace/v/lydanne.i18n-ally-next?label=Marketplace&logo=visual-studio-code&color=007ACC" alt="Marketplace"></a> <a href="https://open-vsx.org/extension/lydanne/i18n-ally-next" target="_blank"><img src="https://img.shields.io/open-vsx/v/lydanne/i18n-ally-next?label=Open%20VSX&color=c160ef" alt="Open VSX"></a> <a href="https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next" target="_blank"><img src="https://img.shields.io/visual-studio-marketplace/i/lydanne.i18n-ally-next?color=4CAF50" alt="Installs"></a> <a href="https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next" target="_blank"><img src="https://img.shields.io/visual-studio-marketplace/r/lydanne.i18n-ally-next?color=FFB400" alt="Rating"></a> <a href="https://github.com/lydanne/i18n-ally-next/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/lydanne/i18n-ally-next?color=blue" alt="License"></a></p>
+<p style="display:flex;gap:2px"><a href="https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community" target="_blank"><img src="https://img.shields.io/visual-studio-marketplace/v/junyou1998.i18n-ally-community?label=Marketplace&logo=visual-studio-code&color=007ACC" alt="Marketplace"></a> <a href="https://open-vsx.org/extension/junyou1998/i18n-ally-community" target="_blank"><img src="https://img.shields.io/open-vsx/v/junyou1998/i18n-ally-community?label=Open%20VSX&color=c160ef" alt="Open VSX"></a> <a href="https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community" target="_blank"><img src="https://img.shields.io/visual-studio-marketplace/i/junyou1998.i18n-ally-community?color=4CAF50" alt="Installs"></a> <a href="https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community" target="_blank"><img src="https://img.shields.io/visual-studio-marketplace/r/junyou1998.i18n-ally-community?color=FFB400" alt="Rating"></a> <a href="https://github.com/junyou1998/i18n-ally-community/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/junyou1998/i18n-ally-community?color=blue" alt="License"></a></p>
 
 ## 基本配置
 
 ### 1. 框架检测
 
-i18n Ally Next 会自动读取 `package.json` 中的依赖来检测你使用的 i18n 框架。支持 Vue I18n、React I18next、Next-intl、Angular ngx-translate 等[众多框架](/zh-CN/guide/supported-frameworks)。
+i18n Ally Community 会自动读取 `package.json` 中的依赖来检测你使用的 i18n 框架。支持 Vue I18n、React I18next、Next-intl、Angular ngx-translate 等[众多框架](/zh-CN/guide/supported-frameworks)。
 
 如果自动检测不生效，可以手动指定：
 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.enabledFrameworks": ["react-i18next"]
+  "i18n-ally-community.enabledFrameworks": ["react-i18next"]
 }
 ```
 
@@ -31,7 +31,7 @@ i18n Ally Next 会自动读取 `package.json` 中的依赖来检测你使用的 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"]
+  "i18n-ally-community.localesPaths": ["src/locales"]
 }
 ```
 
@@ -40,7 +40,7 @@ i18n Ally Next 会自动读取 `package.json` 中的依赖来检测你使用的 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.sourceLanguage": "en"
+  "i18n-ally-community.sourceLanguage": "en"
 }
 ```
 
@@ -51,13 +51,13 @@ i18n Ally Next 会自动读取 `package.json` 中的依赖来检测你使用的 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.displayLanguage": "zh-CN"
+  "i18n-ally-community.displayLanguage": "zh-CN"
 }
 ```
 
 ## 目录结构
 
-i18n Ally Next 支持两种目录结构：
+i18n Ally Community 支持两种目录结构：
 
 ### 文件模式
 
@@ -88,7 +88,7 @@ locales/
 
 ```jsonc
 {
-  "i18n-ally-next.dirStructure": "dir"
+  "i18n-ally-community.dirStructure": "dir"
 }
 ```
 
@@ -99,7 +99,7 @@ locales/
 
 ```jsonc
 {
-  "i18n-ally-next.keystyle": "nested"
+  "i18n-ally-community.keystyle": "nested"
 }
 ```
 

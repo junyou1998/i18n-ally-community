@@ -1,10 +1,10 @@
 # Custom Framework
 
-When your i18n solution is not natively supported, define a custom framework to get full i18n Ally Next support.
+When your i18n solution is not natively supported, define a custom framework to get full i18n Ally Community support.
 
 ## Basic Custom Setup
 
-Create `.vscode/i18n-ally-next-custom-framework.yml`:
+Create `.vscode/i18n-ally-community-custom-framework.yml`:
 
 ```yaml
 languageIds:
@@ -24,9 +24,9 @@ refactorTemplates:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested"
 }
 ```
 
@@ -90,7 +90,7 @@ You can use a custom framework alongside built-in ones:
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.enabledFrameworks": ["react-i18next", "custom"]
+  "i18n-ally-community.enabledFrameworks": ["react-i18next", "custom"]
 }
 ```
 

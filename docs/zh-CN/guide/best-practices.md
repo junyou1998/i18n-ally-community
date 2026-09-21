@@ -1,6 +1,6 @@
 # 最佳实践
 
-本指南涵盖使用 i18n Ally Next 的推荐配置、工作流程和技巧。
+本指南涵盖使用 i18n Ally Community 的推荐配置、工作流程和技巧。
 
 ## 框架指南
 
@@ -37,7 +37,7 @@
 
 ```jsonc
 {
-  "i18n-ally-next.translate.engines": ["google"]
+  "i18n-ally-community.translate.engines": ["google"]
 }
 ```
 
@@ -47,8 +47,8 @@
 
 ```jsonc
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.ignoreFiles": ["node_modules/**", "dist/**"]
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.ignoreFiles": ["node_modules/**", "dist/**"]
 }
 ```
 
@@ -57,6 +57,6 @@
 
 ```jsonc
 {
-  "i18n-ally-next.enabledParsers": ["json"]
+  "i18n-ally-community.enabledParsers": ["json"]
 }
 ```

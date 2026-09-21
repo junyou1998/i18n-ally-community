@@ -1,4 +1,4 @@
 {
-  "i18n-ally-next.localesPaths": "messages",
-  "i18n-ally-next.enabledFrameworks": ["next-intl"]
+  "i18n-ally-community.localesPaths": "messages",
+  "i18n-ally-community.enabledFrameworks": ["next-intl"]
 }

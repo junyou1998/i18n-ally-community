@@ -2,7 +2,7 @@
 
 ## Workspace-level Configuration
 
-In a monorepo, each package can have its own `.vscode/settings.json`. However, if you open the monorepo root in VS Code, you need to configure i18n Ally Next to find locale files across packages.
+In a monorepo, each package can have its own `.vscode/settings.json`. However, if you open the monorepo root in VS Code, you need to configure i18n Ally Community to find locale files across packages.
 
 ### Option 1: Multiple Locale Paths
 
@@ -11,7 +11,7 @@ Point to all packages' locale directories:
 ```jsonc
 // .vscode/settings.json (monorepo root)
 {
-  "i18n-ally-next.localesPaths": [
+  "i18n-ally-community.localesPaths": [
     "packages/web/src/locales",
     "packages/admin/src/locales",
     "packages/shared/locales"
@@ -25,8 +25,8 @@ Use a glob-based path matcher to auto-discover locale files:
 
 ```jsonc
 {
-  "i18n-ally-next.localesPaths": ["packages"],
-  "i18n-ally-next.pathMatcher": "{namespace}/{locale}.json"
+  "i18n-ally-community.localesPaths": ["packages"],
+  "i18n-ally-community.pathMatcher": "{namespace}/{locale}.json"
 }
 ```
 
@@ -61,19 +61,19 @@ packages/
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": [
+  "i18n-ally-community.localesPaths": [
     "packages/shared/locales",
     "packages/web/src/locales",
     "packages/admin/src/locales"
   ],
-  "i18n-ally-next.dirStructure": "dir",
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json"
+  "i18n-ally-community.dirStructure": "dir",
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json"
 }
 ```
 
 ## VS Code Multi-root Workspace
 
-For better isolation, use a [multi-root workspace](https://code.visualstudio.com/docs/editor/multi-root-workspaces). Each workspace folder gets its own i18n Ally Next configuration:
+For better isolation, use a [multi-root workspace](https://code.visualstudio.com/docs/editor/multi-root-workspaces). Each workspace folder gets its own i18n Ally Community configuration:
 
 ```jsonc
 // monorepo.code-workspace
@@ -91,9 +91,9 @@ Each package has its own `.vscode/settings.json`:
 ```jsonc
 // packages/web/.vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.keystyle": "nested"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.keystyle": "nested"
 }
 ```
 
@@ -121,10 +121,10 @@ locales/
 
 ```jsonc
 {
-  "i18n-ally-next.localesPaths": ["locales"],
-  "i18n-ally-next.dirStructure": "dir",
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.json",
-  "i18n-ally-next.defaultNamespace": "common"
+  "i18n-ally-community.localesPaths": ["locales"],
+  "i18n-ally-community.dirStructure": "dir",
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.json",
+  "i18n-ally-community.defaultNamespace": "common"
 }
 ```
 

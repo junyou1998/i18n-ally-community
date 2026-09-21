@@ -2,6 +2,8 @@
 
 <p style="color:#999;font-size:14px">2025-02-14 · Lydanne</p>
 
+> **Historical note:** This article was written by Lydanne for the upstream **i18n Ally Next** project and is preserved here for historical context. It does not represent an endorsement of i18n Ally Community.
+
 > Internationalization (i18n) is one of those things in frontend development that looks simple but quickly becomes painful. Translation files scattered everywhere, typos in key names only discovered at runtime, new languages requiring manual completion one by one… If this resonates with you, this article is for you.
 
 ## Why i18n Ally Next?

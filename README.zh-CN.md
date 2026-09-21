@@ -1,29 +1,32 @@
 <p align="center">
-<img src="https://github.com/lydanne/i18n-ally-next/blob/main/res/logo.png?raw=true" alt="i18n Ally Next" width="128"/>
+<img src="https://github.com/junyou1998/i18n-ally-community/blob/main/res/logo.png?raw=true" alt="i18n Ally Community" width="128"/>
 </p>
 
-<h1 align="center">i18n Ally Next</h1>
+<h1 align="center">i18n Ally Community</h1>
 
 <p align="center">
 <b>VS Code 全能国际化插件</b>
 </p>
 
 <p align="center">
-<a href="https://github.com/lydanne/i18n-ally-next/blob/main/readme.md">English</a> | 简体中文
+<a href="https://github.com/junyou1998/i18n-ally-community/blob/main/README.md">English</a> | 简体中文
 </p>
 
 <p align="center">
-<a href="https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next"><img src="https://img.shields.io/visual-studio-marketplace/v/lydanne.i18n-ally-next?color=6366f1&amp;label=Marketplace&logo=visual-studio-code" alt="VS Code Marketplace" /></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next"><img src="https://img.shields.io/visual-studio-marketplace/d/lydanne.i18n-ally-next?color=06b6d4" alt="Downloads" /></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next"><img src="https://img.shields.io/visual-studio-marketplace/i/lydanne.i18n-ally-next?color=10b981" alt="Installs" /></a>
-<a href="https://github.com/lydanne/i18n-ally-next"><img alt="GitHub stars" src="https://img.shields.io/github/stars/lydanne/i18n-ally-next?style=social"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community"><img src="https://img.shields.io/visual-studio-marketplace/v/junyou1998.i18n-ally-community?color=6366f1&amp;label=Marketplace&logo=visual-studio-code" alt="VS Code Marketplace" /></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community"><img src="https://img.shields.io/visual-studio-marketplace/d/junyou1998.i18n-ally-community?color=06b6d4" alt="Downloads" /></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community"><img src="https://img.shields.io/visual-studio-marketplace/i/junyou1998.i18n-ally-community?color=10b981" alt="Installs" /></a>
+<a href="https://github.com/junyou1998/i18n-ally-community"><img alt="GitHub stars" src="https://img.shields.io/github/stars/junyou1998/i18n-ally-community?style=social"></a>
 </p>
 
 ---
 
+> **社区版本说明：** 此扩展由社区独立发布和维护，与上游 `i18n-ally-next` 维护者无关。此版本使用独立的 `i18n-ally-community.*` 设置和命令命名空间，可以与上游扩展并存而不会共用配置。
+
 ## 功能特性
 
 - **🌍 内联注解** — 在代码中直接查看翻译内容
+- **🔎 按翻译文本反查 Key** — 直接搜索应用中看到的翻译文本，在已加载的语言文件中找到对应的 key，预览匹配结果，并跳转到代码引用或语言文件定义
 - **🔍 悬浮预览** — 悬浮即可预览所有翻译，一键编辑
 - **📦 文案提取** — 检测硬编码字符串，一键提取到语言文件
 - **🤖 机器翻译** — 支持 Google、DeepL、百度、OpenAI 及编辑器内置大模型（Cursor/Windsurf/VSCode Copilot）
@@ -36,14 +39,26 @@
 - **🔎 全项目扫描抽离** — 扫描整个项目的硬编码字符串，批量提取为 i18n key
 - **🧠 编辑器大模型翻译** — 自动识别 VSCode 环境，调用内置大模型进行翻译，支持批量并发
 
+## 按翻译文本反查 Key
+
+当你只知道画面上显示的翻译文字，却不知道对应的 key 时，可以运行 **i18n Ally Community: Search translation by value**，或点击地球加放大镜图标。
+
+- 搜索所有已加载的语言文件，也可以限制在当前文件中搜索。
+- 支持完整文字或部分文字；英文匹配不区分大小写。
+- 在跳转前预览 key、语言、翻译文字和源码引用。
+- 有源码引用时直接跳到使用位置；没有引用时跳到语言文件定义。
+- 支持带 namespace 的 key，并通过 CodeLens 和语言 key 的悬浮提示显示引用数量。
+
+详细说明请参阅[按翻译文本反查 Key 指南](https://junyou1998.github.io/i18n-ally-community/guide/search-by-value)。
+
 ## 快速开始
 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["src/locales"],
-  "i18n-ally-next.sourceLanguage": "en",
-  "i18n-ally-next.displayLanguage": "zh-CN"
+  "i18n-ally-community.localesPaths": ["src/locales"],
+  "i18n-ally-community.sourceLanguage": "en",
+  "i18n-ally-community.displayLanguage": "zh-CN"
 }
 ```
 
@@ -53,17 +68,15 @@
 
 <h4 align="center">内联注解</h4>
 
-![](https://github.com/Lydanne/i18n-ally-next/blob/main/screenshots/annotation.png?raw=true)
+![](https://github.com/junyou1998/i18n-ally-community/blob/main/screenshots/annotation.png?raw=true)
 
 <h4 align="center">悬浮预览与快捷操作</h4>
 
-![](https://github.com/Lydanne/i18n-ally-next/blob/main/screenshots/hover.png?raw=true)
-
+![](https://github.com/junyou1998/i18n-ally-community/blob/main/screenshots/hover.png?raw=true)
 
 <h4 align="center">从代码中提取文案</h4>
 
-![](https://github.com/Lydanne/i18n-ally-next/blob/main/screenshots/extract.png?raw=true)
-
+![](https://github.com/junyou1998/i18n-ally-community/blob/main/screenshots/extract.png?raw=true)
 
 ## 支持的框架
 
@@ -77,7 +90,7 @@
 | **移动端** | Flutter |
 | **后端** | Laravel, Ruby on Rails, PHP Gettext |
 | **工具** | VS Code 扩展, Chrome 扩展, Jekyll |
-| **自定义** | [定义你自己的框架](https://lydanne.github.io/i18n-ally-next/zh-CN/guide/custom-framework) |
+| **自定义** | [定义你自己的框架](https://junyou1998.github.io/i18n-ally-community/zh-CN/guide/custom-framework) |
 
 ## 内联注解模式
 
@@ -86,8 +99,8 @@
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.annotationInPlace": true,
-  "i18n-ally-next.annotationInPlaceFullMatch": true
+  "i18n-ally-community.annotationInPlace": true,
+  "i18n-ally-community.annotationInPlaceFullMatch": true
 }
 ```
 
@@ -106,8 +119,8 @@
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.theme.annotationInPlaceFullMatch": "#ce9178" // 深色主题
-  // "i18n-ally-next.theme.annotationInPlaceFullMatch": "#a31515" // 浅色主题
+  "i18n-ally-community.theme.annotationInPlaceFullMatch": "#ce9178" // 深色主题
+  // "i18n-ally-community.theme.annotationInPlaceFullMatch": "#a31515" // 浅色主题
 }
 ```
 
@@ -124,7 +137,7 @@
 
 ## 文档
 
-📖 **[完整文档](https://lydanne.github.io/i18n-ally-next/zh-CN/)** — 快速开始、配置项、命名空间、自定义框架等。
+📖 **[完整文档](https://junyou1998.github.io/i18n-ally-community/zh-CN/)** — 快速开始、配置项、命名空间、自定义框架等。
 
 ## ❤️ 致谢
 
@@ -132,8 +145,10 @@
 
 ### 贡献者
 
-<a href="https://github.com/lydanne/i18n-ally-next/graphs/contributors"><img src="https://contrib.rocks/image?repo=lydanne/i18n-ally-next" /></a>
+<a href="https://github.com/junyou1998/i18n-ally-community/graphs/contributors"><img src="https://contrib.rocks/image?repo=junyou1998/i18n-ally-community" /></a>
 
 ## 📄 License
 
-[MIT](./LICENSE) © 2025 至今 [Lydanne](https://github.com/lydanne) | MIT © 2021-2024 [Lokalise](https://github.com/lokalise) | MIT © 2019-2020 [Anthony Fu](https://github.com/antfu) | MIT © 2018-2019 [think2011](https://github.com/think2011)
+这是一个独立维护的社区版本，并保留了上游贡献者的版权与许可证声明，详见 [`LICENSE`](./LICENSE)。
+
+[MIT](./LICENSE) © 2026 [junyou1998](https://github.com/junyou1998) | MIT © 2025 至今 [Lydanne](https://github.com/lydanne) | MIT © 2021-2024 [Lokalise](https://github.com/lokalise) | MIT © 2019-2020 [Anthony Fu](https://github.com/antfu) | MIT © 2018-2019 [think2011](https://github.com/think2011)

@@ -6,9 +6,9 @@ import { Config, CurrentFile, Global, KeyDetector } from '~/core'
 import i18n from '~/i18n'
 import { EXT_NAMESPACE } from '../meta'
 
-export const PROBLEM_CODE_HARD_STRING = 'i18n-ally-next-hard-string'
-export const PROBLEM_KEY_MISSING = 'i18n-ally-next-key-missing'
-export const PROBLEM_TRANSLATION_MISSING = 'i18n-ally-next-translation-missing'
+export const PROBLEM_CODE_HARD_STRING = 'i18n-ally-community-hard-string'
+export const PROBLEM_KEY_MISSING = 'i18n-ally-community-key-missing'
+export const PROBLEM_TRANSLATION_MISSING = 'i18n-ally-community-translation-missing'
 
 export interface DiagnosticWithDetection extends Diagnostic {
   detection?: DetectionResult

@@ -1,14 +1,14 @@
 # 审阅系统
 
-i18n Ally Next 内置翻译审阅和协作系统，基于 VS Code 原生的评论 API。
+i18n Ally Community 内置翻译审阅和协作系统，基于 VS Code 原生的评论 API。
 
 ## 启用 / 禁用
 
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.review.enabled": true,
-  "i18n-ally-next.review.gutters": true
+  "i18n-ally-community.review.enabled": true,
+  "i18n-ally-community.review.gutters": true
 }
 ```
 
@@ -28,7 +28,7 @@ i18n Ally Next 内置翻译审阅和协作系统，基于 VS Code 原生的评�
 
 ## 审阅数据
 
-审阅数据存储在项目的 `.vscode/i18n-ally-next-reviews.yml` 文件中。该文件可以提交到版本控制系统，方便团队协作。
+审阅数据存储在项目的 `.vscode/i18n-ally-community-reviews.yml` 文件中。该文件可以提交到版本控制系统，方便团队协作。
 
 ## 用户身份
 
@@ -36,8 +36,8 @@ i18n Ally Next 内置翻译审阅和协作系统，基于 VS Code 原生的评�
 
 ```jsonc
 {
-  "i18n-ally-next.review.user.name": "你的名字",
-  "i18n-ally-next.review.user.email": "you@example.com"
+  "i18n-ally-community.review.user.name": "你的名字",
+  "i18n-ally-community.review.user.email": "you@example.com"
 }
 ```
 
@@ -47,6 +47,6 @@ i18n Ally Next 内置翻译审阅和协作系统，基于 VS Code 原生的评�
 
 ```jsonc
 {
-  "i18n-ally-next.translate.saveAsCandidates": true
+  "i18n-ally-community.translate.saveAsCandidates": true
 }
 ```

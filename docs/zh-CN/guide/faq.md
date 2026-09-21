@@ -5,11 +5,11 @@
 1. 检查插件是否已启用 — 查看活动栏中是否有 i18n Ally 图标
 2. 确保项目的 `package.json` 中有支持的框架依赖
 3. 确认 `localesPaths` 配置正确
-4. 打开输出面板 → 选择 **i18n Ally Next** 查看日志
+4. 打开输出面板 → 选择 **i18n Ally Community** 查看日志
 
 ## 内联注解不显示
 
-- 检查 `i18n-ally-next.annotations` 是否为 `true`
+- 检查 `i18n-ally-community.annotations` 是否为 `true`
 - 确保 `displayLanguage` 已设置且对应的语言文件存在
 - 确认文件的语言 ID 被框架支持
 
@@ -23,7 +23,7 @@
 
 1. 确保你的框架支持命名空间（参见[命名空间](/zh-CN/guide/namespace)）
 2. i18next / react-i18next 会自动启用命名空间
-3. 其他框架需要手动设置 `"i18n-ally-next.namespace": true`
+3. 其他框架需要手动设置 `"i18n-ally-community.namespace": true`
 4. 确认语言文件遵循 `{locale}/{namespace}.{ext}` 结构
 5. 检查 `dirStructure` 是否设为 `"dir"`（而非 `"file"`）
 
@@ -41,7 +41,7 @@
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.localesPaths": ["packages/app/locales"]
+  "i18n-ally-community.localesPaths": ["packages/app/locales"]
 }
 ```
 
@@ -49,7 +49,7 @@
 
 ```jsonc
 {
-  "i18n-ally-next.disabled": true
+  "i18n-ally-community.disabled": true
 }
 ```
 

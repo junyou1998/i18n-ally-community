@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: i18n Ally Next
+  name: i18n Ally Community
   text: VS Code 全能国际化插件
   tagline: 内联注解、自动翻译、文案提取，一站式 i18n 开发体验。
   image:
     src: /logo.png
-    alt: i18n Ally Next
+    alt: i18n Ally Community
   actions:
     - theme: brand
       text: 快速开始
@@ -17,7 +17,7 @@ hero:
       link: /zh-CN/config/
     - theme: alt
       text: GitHub
-      link: https://github.com/lydanne/i18n-ally-next
+      link: https://github.com/junyou1998/i18n-ally-community
 
 features:
   - title: 🌍 内联注解

@@ -84,7 +84,7 @@ t("description")
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.namespace": true
+  "i18n-ally-community.namespace": true
 }
 ```
 
@@ -94,7 +94,7 @@ t("description")
 
 ```jsonc
 {
-  "i18n-ally-next.defaultNamespace": "common"
+  "i18n-ally-community.defaultNamespace": "common"
 }
 ```
 
@@ -106,7 +106,7 @@ t("description")
 
 ```jsonc
 {
-  "i18n-ally-next.pathMatcher": "{locale}/{namespace}.{ext}"
+  "i18n-ally-community.pathMatcher": "{locale}/{namespace}.{ext}"
 }
 ```
 
@@ -115,7 +115,7 @@ t("description")
 你可以在[自定义框架](/zh-CN/guide/custom-framework)配置中启用命名空间：
 
 ```yaml
-# .vscode/i18n-ally-next-custom-framework.yml
+# .vscode/i18n-ally-community-custom-framework.yml
 languageIds:
   - typescript
   - typescriptreact

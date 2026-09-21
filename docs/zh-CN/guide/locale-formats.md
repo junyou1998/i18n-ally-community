@@ -1,6 +1,6 @@
 # 语言文件格式
 
-i18n Ally Next 通过解析器系统支持多种语言文件格式。
+i18n Ally Community 通过解析器系统支持多种语言文件格式。
 
 ## 支持的格式
 
@@ -23,7 +23,7 @@ i18n Ally Next 通过解析器系统支持多种语言文件格式。
 ```jsonc
 // .vscode/settings.json
 {
-  "i18n-ally-next.enabledParsers": ["json", "yaml"]
+  "i18n-ally-community.enabledParsers": ["json", "yaml"]
 }
 ```
 
@@ -33,7 +33,7 @@ i18n Ally Next 通过解析器系统支持多种语言文件格式。
 
 ```jsonc
 {
-  "i18n-ally-next.parsers.extendFileExtensions": {
+  "i18n-ally-community.parsers.extendFileExtensions": {
     "lang": "json"
   }
 }
@@ -46,18 +46,18 @@ i18n Ally Next 通过解析器系统支持多种语言文件格式。
 ```jsonc
 {
   // 写入语言文件时的缩进大小
-  "i18n-ally-next.indent": 2,
+  "i18n-ally-community.indent": 2,
 
   // 缩进风格: "space" 或 "tab"
-  "i18n-ally-next.tabStyle": "space",
+  "i18n-ally-community.tabStyle": "space",
 
   // 文件编码
-  "i18n-ally-next.encoding": "utf-8",
+  "i18n-ally-community.encoding": "utf-8",
 
   // 写入时排序键
-  "i18n-ally-next.sortKeys": true,
+  "i18n-ally-community.sortKeys": true,
 
   // 排序比较方式: "binary" 或 "locale"
-  "i18n-ally-next.sortCompare": "binary"
+  "i18n-ally-community.sortCompare": "binary"
 }
 ```
