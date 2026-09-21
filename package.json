@@ -2,7 +2,7 @@
   "publisher": "junyou1998",
   "name": "i18n-ally-community",
   "displayName": "i18n Ally Community",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@9.15.4",
   "description": "🌍 Community-maintained i18n extension for VS Code",
   "license": "MIT",
