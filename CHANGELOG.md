@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.2.1 (2026-11-03)
+
+
+### Bug Fixes
+
+* resize the extension icon to fit the Marketplace 1024×1024 limit, which blocked publishing 0.2.0
+
 ### 0.2.0 (2026-11-03)
 
 

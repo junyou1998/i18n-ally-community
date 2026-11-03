@@ -87,7 +87,7 @@ So this project is archived in favor of contributing upstream. Thanks to [Lydann
 
 4. Keybindings stay the same — no changes needed.
 
-> 💡 After updating to the final release (v0.2.0), the extension prompts you on startup to install i18n Ally Next and can install it and remove itself in one click. If i18n Ally Next is already installed, this extension stops running automatically to avoid duplicate features.
+> 💡 After updating to the final release (v0.2.1), the extension prompts you on startup to install i18n Ally Next and can install it and remove itself in one click. If i18n Ally Next is already installed, this extension stops running automatically to avoid duplicate features.
 
 ## ❤️ Credits
 

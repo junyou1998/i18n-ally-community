@@ -2,7 +2,7 @@
   "publisher": "junyou1998",
   "name": "i18n-ally-community",
   "displayName": "i18n Ally Community (Deprecated)",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "packageManager": "pnpm@9.15.4",
   "description": "⚠️ Deprecated — merged into i18n Ally Next (lydanne.i18n-ally-next). Please install it instead.",
   "license": "MIT",
