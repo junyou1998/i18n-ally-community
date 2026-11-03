@@ -5,165 +5,96 @@
 <h1 align="center">i18n Ally Community</h1>
 
 <p align="center">
-<b>All in one i18n extension for VS Code</b>
+<b>⚠️ This project is archived. Please use <a href="https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next">i18n Ally Next</a> instead.</b>
 </p>
 
 <p align="center">
 English | <a href="https://github.com/junyou1998/i18n-ally-community/blob/main/README.zh-CN.md">简体中文</a> | <a href="https://github.com/junyou1998/i18n-ally-community/blob/main/README.zh-TW.md">繁體中文</a>
 </p>
 
-<p align="center">
-<a href="https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community"><img src="https://img.shields.io/visual-studio-marketplace/v/junyou1998.i18n-ally-community?color=6366f1&amp;label=Marketplace&logo=visual-studio-code" alt="VS Code Marketplace" /></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community"><img src="https://img.shields.io/visual-studio-marketplace/d/junyou1998.i18n-ally-community?color=06b6d4" alt="Downloads" /></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=junyou1998.i18n-ally-community"><img src="https://img.shields.io/visual-studio-marketplace/i/junyou1998.i18n-ally-community?color=10b981" alt="Installs" /></a>
-<a href="https://github.com/junyou1998/i18n-ally-community"><img alt="GitHub stars" src="https://img.shields.io/github/stars/junyou1998/i18n-ally-community?style=social"></a>
-</p>
-
 ---
 
-> **Community fork:** This extension is independently published and maintained by the community. It is not affiliated with the upstream `i18n-ally-next` maintainers. This extension uses its own `i18n-ally-community.*` settings and command namespace, so it can be installed alongside the upstream extension without sharing configuration.
+> ⚠️ **i18n Ally Community is deprecated and archived.**
+>
+> The reverse lookup features this extension introduced were merged into the upstream [i18n Ally Next](https://github.com/Lydanne/i18n-ally-next) on 2026-11-01 and ship in v3.0.16 and later, with identical features and keybindings.
+>
+> 👉 Please install [**i18n Ally Next**](https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next) (`lydanne.i18n-ally-next`) and uninstall this extension. See [Migrating to i18n Ally Next](#migrating-to-i18n-ally-next) below.
 
-## Features
+## Why This Extension Was Published
 
-- **🌍 Inline Annotations** — See translations directly in your code
-- **🔎 Reverse Lookup by Translation Value** — Search the text shown in your application to find its translation key across loaded locales, preview matches, and jump to source usages or the locale definition
-- **🔍 Hover Preview** — Preview all translations with hover, edit in one click
-- **📦 Extract Hard Strings** — Detect and extract hard-coded strings to locale files
-- **🤖 Machine Translation** — Google, DeepL, Baidu, OpenAI, and Editor built-in LLM (Cursor/Windsurf/VSCode Copilot)
-- **🗂 Namespace** — Organize translations with `t("ns:key")` style
-- **📝 Review System** — Built-in translation review and collaboration
-- **🧩 30+ Frameworks** — Vue, React, Angular, Svelte, Flutter, and more
-- **🎨 Custom Framework** — Define your own framework via YAML config
-- **⚡ Translate All Missing** — One-click translate all missing and stale keys for any locale
-- **🕐 Stale Translation Detection** — Detect outdated translations when source text changes, re-translate one by one or all at once
-- **🔎 Scan & Extract All** — Scan entire project for hard-coded strings and batch extract them into i18n keys
-- **🧠 Editor LLM Translation** — Auto-detect VSCode and use the built-in LLM for translation with batch support
+[i18n Ally Next](https://github.com/Lydanne/i18n-ally-next) is great at going from a **key to its text**: inline annotations, hover previews, and locale editing. In practice, though, the opposite direction comes up constantly — **you only have the text, and you need the key and where it is used**:
 
-## Reverse Lookup by Translation Value
+- QA reports that a button label is wrong, with nothing but a screenshot.
+- A design or product review asks for a piece of copy to change.
+- You want to remove a key but aren't sure whether anything still uses it.
 
-When you know the translated text but not its key, run **i18n Ally Community: Search translation by value** or click the globe and magnifier icon.
+The usual workaround was a global text search through locale files, then a second search through the code with the key you found — even more tedious with nested keys, namespaces, or many locales.
 
-- Search all loaded locale files, or limit the search to the current file.
-- Search with a complete value or partial text; English matching is case-insensitive.
-- Preview the matching key, locale, translated text, and source references before navigating.
-- Jump to source usages, or go directly to the locale definition when no usage exists.
-- Resolve namespace-aware keys and show usage counts through CodeLens and locale-key hovers.
+These reverse lookup features were first built in a fork of i18n Ally Next and offered upstream. Since there was no clear timeline for an upstream merge and day-to-day work already depended on them, they were published on 2026-09-21 to the VS Code Marketplace as a separate `i18n-ally-community` extension. It used its own settings and command namespace, so it could run side by side with i18n Ally Next without conflicts.
 
-See the [Search by translation value guide](https://junyou1998.github.io/i18n-ally-community/guide/search-by-value) for details.
+## What It Added
 
-## Quick Start
+On top of everything i18n Ally Next already does, it added three ways to go from **text back to keys**:
 
-```jsonc
-// .vscode/settings.json
-{
-  "i18n-ally-community.localesPaths": ["src/locales"],
-  "i18n-ally-community.sourceLanguage": "en",
-  "i18n-ally-community.displayLanguage": "zh-CN"
-}
-```
+### 1. Search Translations by Value (Workspace)
 
-> The framework is auto-detected from your `package.json`. See [Supported Frameworks](#supported-frameworks) for the full list.
+`Cmd+Alt+Shift+F` (Windows / Linux: `Alt+Shift+F`), or click the globe-and-magnifier icon in the editor title bar.
 
-## Screenshots
+- Type any text you see in the UI to instantly list matching keys across all locales.
+- Each result shows the key, locale, text, and usage location (file and line); preview with the arrow keys.
+- Press Enter to jump to the usage in your code with a yellow highlight, or to the locale definition if the key is unused.
+- When there are too many results, slots are shared fairly across keys and the title notes that results are truncated.
 
-<h4 align="center">Inline Annotations</h4>
+### 2. Find Translation Value in File
 
-![](https://github.com/junyou1998/i18n-ally-community/blob/main/screenshots/annotation.png?raw=true)
+`Cmd+Alt+F` (Windows / Linux: `Alt+F`)
 
-<h4 align="center">Hover and Direct Actions</h4>
+- Finds keys matching the text within the current file only.
+- All matches get a light yellow highlight and the current one a stronger outlined highlight, so you can see at a glance how many times the text appears and where.
+- Pressing Esc restores your original cursor and scroll position.
 
-![](https://github.com/junyou1998/i18n-ally-community/blob/main/screenshots/hover.png?raw=true)
+### 3. Reverse Key References in Locale Files (CodeLens / Hover)
 
-<h4 align="center">Extract Translations from Code</h4>
+- Shows `X usages` above every key in JSON / YAML locale files; click to open all call sites.
+- Unused keys show `0 usages`, making idle keys easy to clean up.
+- The hover lists the first few usage locations with one-click navigation.
 
-![](https://github.com/junyou1998/i18n-ally-community/blob/main/screenshots/extract.png?raw=true)
+It also handled namespaced keys (including frameworks that use a non-`.` delimiter such as `ns:key`) and built a usage index so opening large locale files stays responsive.
 
-## Supported Frameworks
+## Why It Is Archived
 
-| Category | Frameworks |
-| --- | --- |
-| **Vue** | Vue I18n, Vue SFC, Fluent Vue |
-| **React** | React I18next, React Intl, Lingui |
-| **Next.js** | next-intl, next-i18next, next-translate, next-international |
-| **Angular** | ngx-translate, Transloco |
-| **Others** | Svelte, Ember, i18n-tag, Polyglot, Globalize, UI5 |
-| **Mobile** | Flutter |
-| **Backend** | Laravel, Ruby on Rails, PHP Gettext |
-| **Tools** | VS Code Extension, Chrome Extension, Jekyll |
-| **Custom** | [Define your own framework](https://junyou1998.github.io/i18n-ally-community/guide/custom-framework) |
+The upstream maintainer merged these features on 2026-11-01 in [Lydanne/i18n-ally-next#37](https://github.com/Lydanne/i18n-ally-next/pull/37) and released them in [v3.0.16](https://github.com/Lydanne/i18n-ally-next/releases/tag/v3.0.16).
 
-## Inline Annotation Mode
+This extension existed to solve a real need until the features reached upstream. Now that they have, keeping a separate fork alive would only cause problems:
 
-By default, translations are shown as inline annotations after the key. You can customize this behavior:
+- Users would have to choose between two nearly identical extensions.
+- Fixes and new features would be split across two codebases that are hard to keep in sync.
+- With both installed, CodeLens, annotations, and hovers would all appear twice.
 
-```jsonc
-// .vscode/settings.json
-{
-  "i18n-ally-community.annotationInPlace": true,
-  "i18n-ally-community.annotationInPlaceFullMatch": true
-}
-```
+So this project is archived in favor of contributing upstream. Thanks to [Lydanne](https://github.com/Lydanne) for merging these features.
 
-| Setting | Effect |
-| --- | --- |
-| `annotationInPlace: false` | `t('key')` · translated text |
-| `annotationInPlace: true` | `t(`translated text`)` — hides the key only |
-| `annotationInPlaceFullMatch: true` | translated text — hides the entire function call |
+## Migrating to i18n Ally Next
 
-![Annotation Full Match Mode](./res/annotation-full-match.png)
+1. Install [i18n Ally Next](https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next) (`lydanne.i18n-ally-next`).
+2. Uninstall i18n Ally Community.
+3. Rename your project configuration to the upstream namespace:
 
-> **Note:** When `annotationInPlaceFullMatch` is enabled, moving the cursor to the line will restore the original code for editing. The `annotationMaxLength` limit is automatically disabled in this mode, so translations are shown in full without truncation.
+   | Item | i18n Ally Community | i18n Ally Next |
+   |---|---|---|
+   | Settings prefix (`.vscode/settings.json`) | `i18n-ally-community.*` | `i18n-ally-next.*` |
+   | Custom framework file | `.vscode/i18n-ally-community-custom-framework.yml` | `.vscode/i18n-ally-next-custom-framework.yml` |
+   | Review file | `.vscode/i18n-ally-community-reviews.yml` | `.vscode/i18n-ally-next-reviews.yml` |
 
-The translated text color in full match mode defaults to `#ce9178` (string color in Dark+ theme). You can customize it:
+4. Keybindings stay the same — no changes needed.
 
-```jsonc
-// .vscode/settings.json
-{
-  "i18n-ally-community.theme.annotationInPlaceFullMatch": "#ce9178" // Dark theme
-  // "i18n-ally-community.theme.annotationInPlaceFullMatch": "#a31515" // Light theme
-}
-```
-
-## Optional Dependencies
-
-Some advanced features require additional packages to be installed **in your project**:
-
-| Feature | When needed | Install |
-| --- | --- | --- |
-| **Vue SFC `<i18n>` block** | Using inline `<i18n>` blocks in `.vue` files | `npm i -D vue-template-compiler vue-i18n-locale-message` |
-| **Fluent Vue SFC** | Using Fluent syntax in `.vue` SFC files | `npm i -D fluent-vue-cli` |
-
-> **Note:** If you use standalone locale files (e.g. `locales/en.json`), no extra dependencies are needed. The above packages are only required for SFC inline translation blocks.
-
-## Documentation
-
-📖 **[Full Documentation](https://junyou1998.github.io/i18n-ally-community/)** — Getting started, configuration, namespace, custom framework, and more.
-
-## 🌍 Multilingual Support
-
-This extension itself supports i18n. It auto-matches your VS Code display language.
-
-| Language | Language | Language |
-| --- | --- | --- |
-| English | 简体中文 | 繁體中文 |
-| 日本語 | 한국어 | Deutsch |
-| Français | Español | Português (BR) |
-| Русский | Українська | Türkçe |
-| Nederlands | Svenska | Norsk |
-| Magyar | ภาษาไทย | |
-
-> Want to help translate? See [Contributing](https://junyou1998.github.io/i18n-ally-community/guide/faq).
+> 💡 After updating to the final release (v0.2.0), the extension prompts you on startup to install i18n Ally Next and can install it and remove itself in one click. If i18n Ally Next is already installed, this extension stops running automatically to avoid duplicate features.
 
 ## ❤️ Credits
 
-This extension was originally inspired by [think2011/vscode-vue-i18n](https://github.com/think2011/vscode-vue-i18n). Vue SFC support is powered by [kazupon/vue-i18n-locale-message](https://github.com/kazupon/vue-i18n-locale-message).
-
-### Contributors
-
-<a href="https://github.com/junyou1998/i18n-ally-community/graphs/contributors"><img src="https://contrib.rocks/image?repo=junyou1998/i18n-ally-community" /></a>
+Thanks to [Lydanne](https://github.com/Lydanne) for maintaining i18n Ally Next and merging these features, and to every contributor across the i18n Ally family. This extension was originally inspired by [think2011/vscode-vue-i18n](https://github.com/think2011/vscode-vue-i18n), and Vue SFC support is provided by [kazupon/vue-i18n-locale-message](https://github.com/kazupon/vue-i18n-locale-message).
 
 ## 📄 License
 
-This is an independent community fork. Copyright and license notices for upstream contributors are retained in [`LICENSE`](./LICENSE).
+Upstream copyright and license notices are preserved. See [`LICENSE`](./LICENSE).
 
 [MIT](./LICENSE) © 2026 [junyou1998](https://github.com/junyou1998) | MIT © 2025-PRESENT [Lydanne](https://github.com/lydanne) | MIT © 2021-2024 [Lokalise](https://github.com/lokalise) | MIT © 2019-2020 [Anthony Fu](https://github.com/antfu) | MIT © 2018-2019 [think2011](https://github.com/think2011)

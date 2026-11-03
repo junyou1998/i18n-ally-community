@@ -7,6 +7,7 @@ import i18n from '~/i18n'
 import { Log } from '~/utils'
 import viewsModules from '~/views'
 import { version } from '../package.json'
+import { isSuccessorInstalled, promptMigration } from './deprecation'
 
 export async function activate(ctx: ExtensionContext) {
   Log.info(`🈶 Activated, v${version}`)
@@ -14,6 +15,14 @@ export async function activate(ctx: ExtensionContext) {
   Config.ctx = ctx
 
   i18n.init(ctx.extensionPath)
+
+  const successorInstalled = isSuccessorInstalled()
+  void promptMigration(ctx, successorInstalled)
+  if (successorInstalled) {
+    Log.info('🪦 i18n Ally Next is installed, skipping activation')
+    return
+  }
+
   KeyDetector.init(ctx)
 
   // activate the extension

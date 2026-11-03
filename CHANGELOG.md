@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.2.0 (2026-11-03)
+
+
+### ⚠ DEPRECATED
+
+* i18n Ally Community is deprecated and archived. Its reverse lookup features are part of [i18n Ally Next](https://marketplace.visualstudio.com/items?itemName=lydanne.i18n-ally-next) v3.0.16 and later.
+
+### Features
+
+* prompt users on startup to install i18n Ally Next, with one-click install, uninstall, and reload
+* stop activating when i18n Ally Next is installed to avoid duplicate CodeLens, annotations, and hovers
+* rewrite README with the project history and migration guide
+
 ### 0.1.1 (2026-09-21)
 
 
