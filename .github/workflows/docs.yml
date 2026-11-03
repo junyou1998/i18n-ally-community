@@ -21,23 +21,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - uses: pnpm/action-setup@v4
-      - name: Cache pnpm store
-        uses: actions/cache@v4
-        with:
-          path: ~/.local/share/pnpm/store/v3
-          key: pnpm-docs-${{ hashFiles('docs/pnpm-lock.yaml') }}
-          restore-keys: pnpm-docs-
-      - run: pnpm install --frozen-lockfile
-        working-directory: docs
-      - run: pnpm run build
-        working-directory: docs
+      - name: Prepare archived site
+        run: |
+          mkdir -p site
+          cp docs/archived/index.html site/index.html
+          cp docs/archived/index.html site/404.html
+          cp docs/public/logo.png site/logo.png
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
+          path: site
 
   deploy:
     needs: build

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>i18n Ally Community (Archived)</title>
+  <link rel="icon" type="image/png" href="/i18n-ally-community/logo.png">
+  <link rel="canonical" href="https://lydanne.github.io/i18n-ally-next/">
+  <noscript><meta http-equiv="refresh" content="5; url=https://lydanne.github.io/i18n-ally-next/"></noscript>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1f2937;
+      --muted: #6b7280;
+      --card: #f9fafb;
+      --border: #e5e7eb;
+      --accent: #6366f1;
+      --accent-fg: #ffffff;
+      --warn-bg: #fef3c7;
+      --warn-fg: #92400e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --fg: #f3f4f6;
+        --muted: #9ca3af;
+        --card: #1f2937;
+        --border: #374151;
+        --accent: #818cf8;
+        --accent-fg: #111827;
+        --warn-bg: #451a03;
+        --warn-fg: #fcd34d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px 16px;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      width: 100%;
+      max-width: 560px;
+      padding: 32px 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+      text-align: center;
+    }
+    img { display: block; width: 72px; height: auto; margin: 0 auto; }
+    .badge {
+      display: inline-block;
+      margin: 16px 0 8px;
+      padding: 2px 12px;
+      border-radius: 999px;
+      background: var(--warn-bg);
+      color: var(--warn-fg);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    h1 { margin: 0 0 12px; font-size: 24px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    code { font-size: 0.9em; }
+    .actions { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    a.btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a.btn.primary { background: var(--accent); color: var(--accent-fg); }
+    .countdown { margin-top: 20px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/i18n-ally-community/logo.png" alt="i18n Ally Community">
+    <div class="badge" data-i18n="badge">Archived</div>
+    <h1 data-i18n="title">i18n Ally Community has been archived</h1>
+    <p data-i18n="body">All features of this extension have been merged into i18n Ally Next. Please install <code>lydanne.i18n-ally-next</code> and use its documentation instead.</p>
+    <div class="actions">
+      <a class="btn primary" id="go" href="https://lydanne.github.io/i18n-ally-next/" data-i18n="go">Go to i18n Ally Next docs</a>
+      <a class="btn" href="https://github.com/junyou1998/i18n-ally-community#readme" data-i18n="why">Why archived?</a>
+    </div>
+    <p class="countdown" id="countdown"></p>
+  </main>
+  <script>
+    (function () {
+      var messages = {
+        'zh-TW': {
+          badge: '已封存',
+          title: 'i18n Ally Community 已封存',
+          body: '本擴充套件的功能已全部併入 i18n Ally Next，請改為安裝 <code>lydanne.i18n-ally-next</code> 並參考它的文件。',
+          go: '前往 i18n Ally Next 文件',
+          why: '為什麼封存？',
+          countdown: '{n} 秒後自動前往對應頁面…',
+        },
+        'zh-CN': {
+          badge: '已归档',
+          title: 'i18n Ally Community 已归档',
+          body: '本扩展的功能已全部合并到 i18n Ally Next，请改为安装 <code>lydanne.i18n-ally-next</code> 并参考它的文档。',
+          go: '前往 i18n Ally Next 文档',
+          why: '为什么归档？',
+          countdown: '{n} 秒后自动跳转到对应页面…',
+        },
+        'en': {
+          countdown: 'Redirecting to the matching page in {n} seconds…',
+        },
+      }
+      var lang = (navigator.language || 'en').toLowerCase()
+      var key = /^zh-(tw|hk|mo|hant)/.test(lang) ? 'zh-TW' : lang.indexOf('zh') === 0 ? 'zh-CN' : 'en'
+      var dict = messages[key]
+      document.documentElement.lang = key
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var text = dict[el.getAttribute('data-i18n')]
+        if (text)
+          el.innerHTML = text
+      })
+
+      var base = '/i18n-ally-community/'
+      var path = location.pathname.indexOf(base) === 0 ? location.pathname.slice(base.length) : ''
+      path = path.replace(/^index\.html$/, '').replace(/\.html$/, '')
+      var target = 'https://lydanne.github.io/i18n-ally-next/' + path + location.search + location.hash
+      document.getElementById('go').href = target
+
+      var n = 5
+      var el = document.getElementById('countdown')
+      var tick = function () {
+        el.textContent = dict.countdown.replace('{n}', n)
+        if (n-- <= 0)
+          location.replace(target)
+        else
+          setTimeout(tick, 1000)
+      }
+      tick()
+    })()
+  </script>
+</body>
+</html>
